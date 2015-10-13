@@ -9,7 +9,7 @@ King's College London - KCLTech Society's iOS session with 10 weeks material in 
 
 ## Session 102
 
-- Session 102 Slides
+- [Session 102 Slides](session102/session102_2015.pdf)
 - [Project 1 Assets](session102/Project1_assets)
-- Project 1
-- Challenge 1
+- [Project 1](session102/Project1)
+- [Challenge 1](session102/Challenge1.playground)
