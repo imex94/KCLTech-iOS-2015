@@ -1,6 +1,7 @@
 # KCLTech iOS Sessions 2015
 King's College London - KCLTech Society's iOS session with 10 weeks material in Swift 2.0 and iOS 9, watchOS 2. 
 
+[KCL Tech iOS - iTunes U Course](http://itunesu.kcl.tech)
 [KCL Tech Slack (#ios-programming)](https://kcltechhq.slack.com)
 
 ## Session 101
@@ -13,3 +14,9 @@ King's College London - KCLTech Society's iOS session with 10 weeks material in 
 - [Project 1 Assets](session102/Project1_assets)
 - [Project 1](session102/Project1)
 - [Challenge 1](session102/Challenge1.playground)
+
+## Session 103
+
+- Session 103 Slides
+- Challenge 2
+- Project 2
