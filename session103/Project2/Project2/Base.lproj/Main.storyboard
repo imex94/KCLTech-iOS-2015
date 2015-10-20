@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUX-tC-PKK">
+                                <rect key="frame" x="251" y="90" width="99" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Present image"/>
+                                <connections>
+                                    <segue destination="yd2-TE-8YA" kind="presentation" identifier="presentImageView" modalTransitionStyle="coverVertical" id="WbP-NU-3Y1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wgc-ZL-3RO">
+                                <rect key="frame" x="253" y="210" width="95" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Show website"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ghx-wS-CZi">
+                                <rect key="frame" x="264" y="330" width="72" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Show map"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24h-FV-LiI">
+                                <rect key="frame" x="268" y="450" width="64" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Deep link"/>
+                                <connections>
+                                    <action selector="deepLinkButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lfp-cd-Zd6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wgc-ZL-3RO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="621-xO-1WZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ghx-wS-CZi" secondAttribute="bottom" multiplier="5:3" id="9oa-ra-vTs"/>
+                            <constraint firstItem="Ghx-wS-CZi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9qP-8A-ZFp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xUX-tC-PKK" secondAttribute="bottom" multiplier="5:1" id="HgL-Xq-g44"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Wgc-ZL-3RO" secondAttribute="bottom" multiplier="5:2" id="Kji-Wj-uC7"/>
+                            <constraint firstItem="24h-FV-LiI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qj7-1Z-iIq"/>
+                            <constraint firstItem="xUX-tC-PKK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jnl-qT-Ss9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="24h-FV-LiI" secondAttribute="bottom" multiplier="5:4" id="oTI-BJ-VNQ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448" y="463"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="ZIi-SS-buj">
+            <objects>
+                <viewController id="yd2-TE-8YA" customClass="PRImageViewController" customModule="Project2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8LK-7h-j67"/>
+                        <viewControllerLayoutGuide type="bottom" id="sg3-6X-wY1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BsN-8o-OQA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGx-Z0-1Yw">
+                                <rect key="frame" x="282" y="550" width="37" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="dismissView:" destination="yd2-TE-8YA" eventType="touchUpInside" id="kGs-f1-0SD"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f9N-RM-NlM">
+                                <rect key="frame" x="20" y="28" width="560" height="343"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="343" id="cRU-xn-5x3"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f9N-RM-NlM" firstAttribute="trailing" secondItem="BsN-8o-OQA" secondAttribute="trailingMargin" id="6F6-Jq-gDw"/>
+                            <constraint firstItem="f9N-RM-NlM" firstAttribute="centerX" secondItem="CGx-Z0-1Yw" secondAttribute="centerX" id="CI5-xk-OtF"/>
+                            <constraint firstItem="f9N-RM-NlM" firstAttribute="top" secondItem="8LK-7h-j67" secondAttribute="bottom" constant="8" symbolic="YES" id="pcJ-Mj-W4e"/>
+                            <constraint firstItem="f9N-RM-NlM" firstAttribute="leading" secondItem="BsN-8o-OQA" secondAttribute="leadingMargin" id="tYd-4z-3nl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="f9N-RM-NlM" id="jOb-M2-KqH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="85R-fU-u0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1221" y="463"/>
+        </scene>
+    </scenes>
+</document>
