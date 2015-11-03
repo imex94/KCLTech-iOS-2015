@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="hackathonCell" rowHeight="262" id="KGk-i7-Jjw" customClass="HTLHackathonTableViewCell" customModule="Hackalendar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="260"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="259"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcc-aL-97R">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
+                        <animations/>
+                    </mapView>
+                    <view alpha="0.55000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UP3-kt-OfZ">
+                        <rect key="frame" x="0.0" y="200" width="600" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HackKing's" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quq-ca-AAv">
+                                <rect key="frame" x="8" y="14" width="200" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12-13 December" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAH-qi-VkM">
+                                <rect key="frame" x="216" y="14" width="167" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="167" id="tAd-4e-cWI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="London" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZN-Sc-3hV">
+                                <rect key="frame" x="391" y="14" width="200" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VZN-Sc-3hV" firstAttribute="leading" secondItem="UAH-qi-VkM" secondAttribute="trailing" constant="8" symbolic="YES" id="AR4-lT-d8w"/>
+                            <constraint firstItem="quq-ca-AAv" firstAttribute="leading" secondItem="UP3-kt-OfZ" secondAttribute="leadingMargin" id="Ck6-4U-Y8N"/>
+                            <constraint firstItem="quq-ca-AAv" firstAttribute="top" secondItem="UP3-kt-OfZ" secondAttribute="top" constant="14" id="EJ5-cx-UuM"/>
+                            <constraint firstItem="UAH-qi-VkM" firstAttribute="leading" secondItem="quq-ca-AAv" secondAttribute="trailing" constant="8" symbolic="YES" id="FDV-ah-ApR"/>
+                            <constraint firstItem="UAH-qi-VkM" firstAttribute="baseline" secondItem="VZN-Sc-3hV" secondAttribute="baseline" id="SGZ-Gm-eUR"/>
+                            <constraint firstAttribute="trailing" secondItem="VZN-Sc-3hV" secondAttribute="trailing" constant="9" id="V3i-a0-Dm1"/>
+                            <constraint firstItem="UAH-qi-VkM" firstAttribute="centerY" secondItem="UP3-kt-OfZ" secondAttribute="centerY" id="V8V-OT-5bI"/>
+                            <constraint firstItem="UAH-qi-VkM" firstAttribute="baseline" secondItem="quq-ca-AAv" secondAttribute="baseline" id="WLj-Sy-otP"/>
+                            <constraint firstItem="UAH-qi-VkM" firstAttribute="centerX" secondItem="UP3-kt-OfZ" secondAttribute="centerX" id="h7O-Sf-8dl"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="mcc-aL-97R" secondAttribute="bottom" constant="1" id="9kR-dn-hX7"/>
+                    <constraint firstItem="mcc-aL-97R" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Gvg-HV-nsN"/>
+                    <constraint firstItem="UP3-kt-OfZ" firstAttribute="leading" secondItem="mcc-aL-97R" secondAttribute="leading" id="SFe-HC-AKv"/>
+                    <constraint firstItem="mcc-aL-97R" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TFb-W9-I2j"/>
+                    <constraint firstItem="mcc-aL-97R" firstAttribute="bottom" secondItem="UP3-kt-OfZ" secondAttribute="bottom" id="awJ-9d-pOU"/>
+                    <constraint firstAttribute="trailing" secondItem="UP3-kt-OfZ" secondAttribute="trailing" id="cc0-uk-odE"/>
+                    <constraint firstItem="mcc-aL-97R" firstAttribute="trailing" secondItem="UP3-kt-OfZ" secondAttribute="trailing" id="ebd-dt-Aya"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="UP3-kt-OfZ" secondAttribute="bottom" constant="1" id="hi7-Se-MNt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="HackathonPlace" destination="VZN-Sc-3hV" id="K2W-Cj-SkR"/>
+                <outlet property="hackathonDate" destination="UAH-qi-VkM" id="r4f-St-mUf"/>
+                <outlet property="hackathonName" destination="quq-ca-AAv" id="Rj0-fX-sTJ"/>
+                <outlet property="mapView" destination="mcc-aL-97R" id="SlC-aS-NHT"/>
+            </connections>
+            <point key="canvasLocation" x="305" y="451"/>
+        </tableViewCell>
+    </objects>
+</document>
