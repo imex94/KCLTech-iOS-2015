@@ -24,4 +24,4 @@ King's College London - KCLTech Society's iOS session with 10 weeks material in 
 
 ## Session 104
 
-- [Project X](session104/Hackalendar)
+- [Hackalendar - Part 1](session104/Hackalendar)
