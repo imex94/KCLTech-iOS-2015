@@ -20,4 +20,9 @@ King's College London - KCLTech Society's iOS session with 10 weeks material in 
 
 - [Session 103 Slides](session103/session103_2015.pdf)
 - [Project 2 Assets](session103/Project2_assets)
-- [Project 2](session103/Project2) - In progress
+- [Project 2](session103/Project2)
+
+## Session 104
+
+- Project X
+- Project X Assets
