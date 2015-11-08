@@ -24,4 +24,8 @@ King's College London - KCLTech Society's iOS session with 10 weeks material in 
 
 ## Session 104
 
-- [Hackalendar - Part 1](session104/Hackalendar)
+- [Hackalendar - Part 1] - TableViews, TableViewCells and Delegates (session104/Hackalendar)
+
+## Session 105
+
+- Hackalendar - Part 2 - Networking in iOS and Testing
