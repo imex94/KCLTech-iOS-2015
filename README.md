@@ -29,3 +29,8 @@ King's College London - KCLTech Society's iOS session with 10 weeks material in 
 ## Session 105
 
 - [Hackalendar - Part 2](session105/Hackalendar) - Networking in iOS and Testing
+
+
+## Session 106
+
+- [Hackalendar - Part 3](session106/Hackalendar) - Persistent Storage in iOS
