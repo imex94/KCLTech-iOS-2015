@@ -8,19 +8,19 @@
 
 import UIKit
 
-class HTLHackathonTableViewController: UITableViewController, HTLHackathonTableViewDelegate {
+class HCHackathonTableViewController: UITableViewController, HCHackathonTableViewDelegate {
 
     var selectedRow = 0
-    var hackathons = [HTLHackathon]()
+    var hackathons = [HCHackathon]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        fetchHackathons()
-        
-        tableView.registerNib(UINib(nibName: "HTLHackathonTableViewCell", bundle: nil), forCellReuseIdentifier: "hackathonCell")
+        tableView.registerNib(UINib(nibName: "HCHackathonTableViewCell", bundle: nil), forCellReuseIdentifier: "hackathonCell")
         
         self.navigationController?.navigationBar.topItem?.title = "Hackathons"
+        
+        fetchData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,29 +28,13 @@ class HTLHackathonTableViewController: UITableViewController, HTLHackathonTableV
         // Dispose of any resources that can be recreated.
     }
     
-    func fetchHackathons() {
+    func fetchData() {
         
-        HTLHackathonProvider.provideHackathonsFor(11) { (hackathons) -> Void in
+        HCHackathonProvider.provideHackathonsFor(11) { (hackathons) -> Void in
             
             self.hackathons.appendContentsOf(hackathons)
-            self.hackathons.sortInPlace({$0.dateCode < $1.dateCode})
-            
-            self.geoLocateHackathons()
             
             self.tableView.reloadData()
-        }
-    }
-    
-    func geoLocateHackathons() {
-        
-        for hackathon in hackathons {
-            
-            HTLLocationUtility.geolocateCityForLocationName(hackathon.city, completitionHandler: { (coordinate) -> Void in
-                
-                hackathon.coordinate = coordinate
-                
-                self.tableView.reloadData()
-            })
         }
     }
 
@@ -72,7 +56,7 @@ class HTLHackathonTableViewController: UITableViewController, HTLHackathonTableV
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("hackathonCell", forIndexPath: indexPath) as! HTLHackathonTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("hackathonCell", forIndexPath: indexPath) as! HCHackathonTableViewCell
 
         cell.delegate = self
         
@@ -81,9 +65,7 @@ class HTLHackathonTableViewController: UITableViewController, HTLHackathonTableV
         cell.tag = indexPath.row
         cell.hackathonName.text = currentHackathon.title
         cell.hackathonDate.text = currentHackathon.startDate
-        cell.HackathonPlace.text = HTLLocationUtility.extractCityFromLocation(currentHackathon.city)
-        
-        cell.addLocation(currentHackathon.coordinate)
+        cell.HackathonPlace.text = currentHackathon.city
 
         return cell
     }
@@ -117,11 +99,8 @@ class HTLHackathonTableViewController: UITableViewController, HTLHackathonTableV
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        let destinationViewController = segue.destinationViewController as! HTLHackathonDetailViewController
-        
-//        For example
-//        destinationViewController.title = "Row \(selectedRow + 1)"
-        
+        let destinationViewController = segue.destinationViewController as! HCHackathonDetailViewController
         destinationViewController.title = hackathons[selectedRow].title
     }
+
 }

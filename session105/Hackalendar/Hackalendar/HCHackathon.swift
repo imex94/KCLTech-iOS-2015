@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import CoreLocation
 
-class HTLHackathon {
+class HCHackathon {
     
     var title: String?
     var url: NSURL?
@@ -27,9 +26,6 @@ class HTLHackathon {
     var twitterURL: NSURL?
     var googlePlusURL: NSURL?
     var notes: String?
-    
-    var dateCode: String?
-    var coordinate: CLLocationCoordinate2D?
     
     init(title: String?) {
         self.title = title

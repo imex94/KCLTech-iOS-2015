@@ -28,26 +28,21 @@ class HackalendarUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testApplicationFetchesHackathonsWhenAppDidLoad() {
+    func testTitleHasIncludedOnNavigationBarWhenViewDidLoad() {
+        // Use recording to get started writing UI tests.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
         
-        let app = XCUIApplication()
         
-        XCTAssertTrue(app.tables.cells.count >= 1)
-        XCTAssertTrue(app.navigationBars["Hackathons"].exists)
+        
+        // There are many methods and attributes you can use for testing, you can get buttons, labels on view
+        // For our app we needed the navigation bar. If you don't know how to get that, press record and click on the navigation bar
+        // It will give you do code for it and you can modify it according to this:
+        
+        // XCTAsstert class will make sure that the line we have down there is compared to something. In this case
+        // we compare if the navigation bar exists or not to true. If true = true -> pass otherwise fail
+        
+        XCTAssertTrue(XCUIApplication().navigationBars["Hackathons"].exists)
+        
     }
     
-    func testCellsContainMapForEachHackathon() {
-    
-        let tablesQuery = XCUIApplication().tables
-        XCTAssertTrue(tablesQuery.cells.element.maps.element.exists)
-    }
-    
-    func testCellsContainViewWilThreeLables() {
-    
-        let tableQuery = XCUIApplication().tables
-        
-        XCTAssertTrue(tableQuery.staticTexts["HackKings"].exists)
-        XCTAssertTrue(tableQuery.staticTexts["December 12"].exists)
-        XCTAssertTrue(tableQuery.staticTexts["London"].exists)
-    }
 }
