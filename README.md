@@ -24,13 +24,13 @@ King's College London - KCLTech Society's iOS session with 10 weeks material in 
 
 ## Session 104
 
-- [Hackalendar - Part 1](session104/Hackalendar) - TableViews, TableViewCells and Delegates
+- [Hackalendar - Part 1](Hackalendar/Hackalendar) - TableViews, TableViewCells and Delegates
 
 ## Session 105
 
-- [Hackalendar - Part 2](session105/Hackalendar) - Networking in iOS and Testing
+- [Hackalendar - Part 2](Hackalendar/Hackalendar) - Networking in iOS and Testing
 
 
 ## Session 106
 
-- [Hackalendar - Part 3](session106/Hackalendar) - Persistent Storage in iOS
+- [Hackalendar - Part 3](Hackalendar/Hackalendar) - Persistent Storage in iOS
