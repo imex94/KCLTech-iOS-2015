@@ -34,7 +34,22 @@ class HCHackathonTableViewController: UITableViewController, HCHackathonTableVie
             
             self.hackathons.appendContentsOf(hackathons)
             
+            self.locateHackathons()
+            
             self.tableView.reloadData()
+        }
+    }
+    
+    func locateHackathons() {
+        
+        for hackathon in hackathons {
+            
+            HCLocationUtility.locateCityForLocationName(hackathon.city, completitionHandler: { (coordinate) -> Void in
+                
+                hackathon.coordinate = coordinate
+                
+                self.tableView.reloadData()
+            })
         }
     }
 
@@ -46,12 +61,12 @@ class HCHackathonTableViewController: UITableViewController, HCHackathonTableVie
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        
         return hackathons.count
     }
 
@@ -65,12 +80,16 @@ class HCHackathonTableViewController: UITableViewController, HCHackathonTableVie
         cell.tag = indexPath.row
         cell.hackathonName.text = currentHackathon.title
         cell.hackathonDate.text = currentHackathon.startDate
-        cell.HackathonPlace.text = currentHackathon.city
+        cell.HackathonPlace.text = HCLocationUtility.extractCityNameFromLocation(currentHackathon.city)
 
+        cell.addLocation(currentHackathon.coordinate)
+        
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        performSegueWithIdentifier("showDetails", sender: self)
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }

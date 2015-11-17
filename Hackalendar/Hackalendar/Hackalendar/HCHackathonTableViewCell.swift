@@ -34,4 +34,13 @@ class HCHackathonTableViewCell: UITableViewCell {
         
         delegate?.performSegueOnMapClick(tag)
     }
+    
+    func addLocation(location: CLLocationCoordinate2D?) {
+        
+        if let coordinate = location {
+            
+            let region = MKCoordinateRegionMakeWithDistance(coordinate, 5000, 5000)
+            mapView.setRegion(region, animated: true)
+        }
+    }
 }

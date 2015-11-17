@@ -42,7 +42,19 @@ class HackalendarUITests: XCTestCase {
         // we compare if the navigation bar exists or not to true. If true = true -> pass otherwise fail
         
         XCTAssertTrue(XCUIApplication().navigationBars["Hackathons"].exists)
-        
     }
     
+    func testCellsContainMapForEachHackathon() {
+        
+        let query = XCUIApplication().tables
+        XCTAssertTrue(query.cells.element.maps.element.exists)
+    }
+    
+    func testCellsContainThreeLables() {
+        
+        let query = XCUIApplication().tables
+        
+        XCTAssertTrue(query.staticTexts["Citrus Hack"].exists)
+        XCTAssertTrue(query.staticTexts["November 6"].exists)
+    }
 }
