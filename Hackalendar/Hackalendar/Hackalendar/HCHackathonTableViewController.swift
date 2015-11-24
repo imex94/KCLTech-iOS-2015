@@ -120,6 +120,7 @@ class HCHackathonTableViewController: UITableViewController, HCHackathonTableVie
         
         let destinationViewController = segue.destinationViewController as! HCHackathonDetailViewController
         destinationViewController.title = hackathons[selectedRow].title
+        destinationViewController.hackathon = hackathons[selectedRow]
     }
 
 }

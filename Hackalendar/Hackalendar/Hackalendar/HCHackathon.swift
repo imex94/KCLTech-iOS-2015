@@ -20,7 +20,7 @@ class HCHackathon {
     var host: String?
     var length: Int!
     var size: Int!
-    var travel: String?
+    var travel: Bool?
     var prize: Bool!
     var highSchoolers: Bool!
     var facebookURL: NSURL?

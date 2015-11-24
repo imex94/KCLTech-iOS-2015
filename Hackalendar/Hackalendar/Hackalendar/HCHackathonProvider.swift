@@ -49,7 +49,15 @@ class HCHackathonProvider: NSObject {
                             hackathonObject.host = hackathon["host"]
                             hackathonObject.length = Int(hackathon["length"]!)
                             hackathonObject.size = hackathon["size"]! == "unknown" ? 0 : Int(hackathon["size"]!)
-                            hackathonObject.travel = hackathon["travel"]
+                            
+                            let travel = hackathon["travel"]!
+                            switch travel {
+                                case "yes": hackathonObject.travel = true
+                                case "no" : hackathonObject.travel = false
+                                case "unknown" : hackathonObject.travel = nil
+                                default: hackathonObject.travel = nil
+                            }
+                            
                             hackathonObject.prize = hackathon["prize"]! == "yes" ? true : false
                             hackathonObject.highSchoolers = hackathon["highSchoolers"]! == "yes" ? true : false
                             hackathonObject.facebookURL = NSURL(string: hackathon["facebookURL"]!)
