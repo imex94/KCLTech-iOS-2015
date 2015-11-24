@@ -12,7 +12,12 @@ class HCHackathonProvider: NSObject {
 
     static let baseURL = "http://www.hackalist.org/api/1.0/"
     
-    class func provideHackathonsFor(month: Int, completionBlock: ([HCHackathon]) -> Void) {
+    class func loadHackathons(year: Int, month: Int) -> [HackathonItem] {
+        
+        return HackathonItem.fetchHackathons("year == %@ && month == %@", args: [year, month], sortKeywords: ["year", "month"])
+    }
+    
+    class func provideHackathonsFor(month: Int, completionBlock: ([HackathonItem]) -> Void) {
         
         let dateComponents = NSCalendar.currentCalendar().components(.Year, fromDate: NSDate())
         let year = dateComponents.year
@@ -20,14 +25,14 @@ class HCHackathonProvider: NSObject {
         provideHackathonsFor(year, month: month, completionBlock: completionBlock)
     }
     
-    class func provideHackathonsFor(year: Int, month: Int, completionBlock: ([HCHackathon]) -> Void) {
+    class func provideHackathonsFor(year: Int, month: Int, completionBlock: ([HackathonItem]) -> Void) {
         
         // hackalist.org/api/1.0/2015/12.json
         let urlString = baseURL + "\(year)/\(month).json"
         
         HCServer.sharedServer().GET(urlString) { (response) -> Void in
             
-            var parsedHackathons = [HCHackathon]()
+            var parsedHackathons = [HackathonItem]()
             
             switch response {
                 case .Failure(_): print("Failed to fetch data")
@@ -35,27 +40,34 @@ class HCHackathonProvider: NSObject {
                 
                     if let json = data as? Dictionary<NSObject, AnyObject> {
                         
+                        // Remove before fetching
+                        HackathonItem.removeHackathons(year, month: month)
+                        
                         let monthString = NSDateFormatter().monthSymbols[month - 1]
                         let hackathons = json[monthString] as! Array<Dictionary<String, String>>
                         
                         for hackathon in hackathons {
                             
-                            let hackathonObject = HCHackathon(title: hackathon["title"])
-                            hackathonObject.url = NSURL(string: hackathon["url"]!)
+                            let hackathonObject = HackathonItem.item()
+                            hackathonObject.title = hackathon["title"]
+                            hackathonObject.url = hackathon["url"]
                             hackathonObject.startDate = hackathon["startDate"]
                             hackathonObject.endDate = hackathon["endDate"]
                             hackathonObject.year = Int(hackathon["year"]!)
                             hackathonObject.city = hackathon["city"]
                             hackathonObject.host = hackathon["host"]
                             hackathonObject.length = Int(hackathon["length"]!)
-                            hackathonObject.size = hackathon["size"]! == "unknown" ? 0 : Int(hackathon["size"]!)
+                            hackathonObject.size = hackathon["size"]
                             hackathonObject.travel = hackathon["travel"]
                             hackathonObject.prize = hackathon["prize"]! == "yes" ? true : false
                             hackathonObject.highSchoolers = hackathon["highSchoolers"]! == "yes" ? true : false
-                            hackathonObject.facebookURL = NSURL(string: hackathon["facebookURL"]!)
-                            hackathonObject.twitterURL = NSURL(string: hackathon["twitterURL"]!)
-                            hackathonObject.googlePlusURL = NSURL(string: hackathon["googlePlusURL"]!)
+                            hackathonObject.facebookURL = hackathon["facebookURL"]
+                            hackathonObject.twitterURL = hackathon["twitterURL"]
+                            hackathonObject.googlePlusURL = hackathon["googlePlusURL"]
                             hackathonObject.notes = hackathon["notes"]
+                            hackathonObject.month = month
+                            
+                            HCDataManager.saveContext()
                             
                             parsedHackathons.append(hackathonObject)
                         }

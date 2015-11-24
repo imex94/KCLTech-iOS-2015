@@ -11,7 +11,7 @@ import UIKit
 class HCHackathonTableViewController: UITableViewController, HCHackathonTableViewDelegate {
 
     var selectedRow = 0
-    var hackathons = [HCHackathon]()
+    var hackathons = [HackathonItem]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,13 @@ class HCHackathonTableViewController: UITableViewController, HCHackathonTableVie
         
         self.navigationController?.navigationBar.topItem?.title = "Hackathons"
         
-        fetchData()
+        hackathons = HCHackathonProvider.loadHackathons(2015, month: 12)
+        print(hackathons.count)
+        
+        if hackathons.count == 0 {
+         
+            fetchData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,10 +36,12 @@ class HCHackathonTableViewController: UITableViewController, HCHackathonTableVie
     
     func fetchData() {
         
-        HCHackathonProvider.provideHackathonsFor(11) { (hackathons) -> Void in
+        print("Fetching")
+        
+        HCHackathonProvider.provideHackathonsFor(12) { (hackathons) -> Void in
             
             self.hackathons.appendContentsOf(hackathons)
-            
+            print(self.hackathons.count)
             self.locateHackathons()
             
             self.tableView.reloadData()
@@ -46,7 +54,13 @@ class HCHackathonTableViewController: UITableViewController, HCHackathonTableVie
             
             HCLocationUtility.locateCityForLocationName(hackathon.city, completitionHandler: { (coordinate) -> Void in
                 
-                hackathon.coordinate = coordinate
+                if let location = coordinate {
+                 
+                    hackathon.latitude = location.latitude
+                    hackathon.longitude = location.longitude
+                    
+                    HCDataManager.saveContext()
+                }
                 
                 self.tableView.reloadData()
             })
@@ -82,12 +96,14 @@ class HCHackathonTableViewController: UITableViewController, HCHackathonTableVie
         cell.hackathonDate.text = currentHackathon.startDate
         cell.HackathonPlace.text = HCLocationUtility.extractCityNameFromLocation(currentHackathon.city)
 
-        cell.addLocation(currentHackathon.coordinate)
+        cell.addLocation(currentHackathon.latitude?.doubleValue, longitude: currentHackathon.longitude?.doubleValue)
         
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        selectedRow = indexPath.row
         
         performSegueWithIdentifier("showDetails", sender: self)
         
