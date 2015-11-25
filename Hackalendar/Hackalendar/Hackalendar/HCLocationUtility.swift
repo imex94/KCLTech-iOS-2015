@@ -11,6 +11,11 @@ import MapKit
 
 class HCLocationUtility: NSObject {
 
+    /**
+        Extract city name from the location.
+        For instance the location param is give as: London, United Kingdom.
+        That will result London.
+    */
     class func extractCityNameFromLocation(location: String?) -> String? {
      
         if location == nil {
@@ -20,6 +25,11 @@ class HCLocationUtility: NSObject {
         return location!.characters.split{$0 == ","}.map(String.init).first
     }
     
+    /**
+        Get location coordinates (latitude and longitude) for a location specified
+        as a string. For Instance, given by London, United Kingdom will result
+        something like this (51.5073509, -0.12775829999998223)
+    */
     class func locateCityForLocationName(location: String?, completitionHandler: (CLLocationCoordinate2D?) -> Void) {
         
         let searchRequest = MKLocalSearchRequest()
@@ -38,7 +48,6 @@ class HCLocationUtility: NSObject {
                 
                 let mapItem = response!.mapItems.first
                 completitionHandler(mapItem?.placemark.coordinate)
-                
             })
         }
     }

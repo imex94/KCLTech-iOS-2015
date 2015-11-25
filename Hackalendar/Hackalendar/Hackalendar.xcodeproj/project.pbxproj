@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1126FE191C04E86D009B828F /* HCDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1126FE181C04E86D009B828F /* HCDataManager.swift */; };
+		1126FE1D1C04FD2C009B828F /* HackathonItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1126FE1C1C04FD2C009B828F /* HackathonItem+CoreDataProperties.swift */; };
 		11509CDC1BFBB11300C157A3 /* HCHackathonProviderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11509CDB1BFBB11300C157A3 /* HCHackathonProviderTest.swift */; };
 		11509CDE1BFBB41D00C157A3 /* HCLocationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11509CDD1BFBB41D00C157A3 /* HCLocationUtility.swift */; };
 		2B1D2B621BE9679800564B2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D2B611BE9679800564B2F /* AppDelegate.swift */; };
@@ -14,16 +16,15 @@
 		2B1D2B6C1BE9679800564B2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B1D2B6B1BE9679800564B2F /* Assets.xcassets */; };
 		2B1D2B6F1BE9679800564B2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1D2B6D1BE9679800564B2F /* LaunchScreen.storyboard */; };
 		2B1D2B851BE9679800564B2F /* HackalendarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D2B841BE9679800564B2F /* HackalendarUITests.swift */; };
-		2B1D2B971BE967CF00564B2F /* HCHackathon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D2B921BE967CF00564B2F /* HCHackathon.swift */; };
 		2B1D2B981BE967CF00564B2F /* HCHackathonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D2B931BE967CF00564B2F /* HCHackathonDetailViewController.swift */; };
 		2B1D2B991BE967CF00564B2F /* HCHackathonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D2B941BE967CF00564B2F /* HCHackathonTableViewCell.swift */; };
 		2B1D2B9A1BE967CF00564B2F /* HCHackathonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B1D2B951BE967CF00564B2F /* HCHackathonTableViewCell.xib */; };
 		2B1D2B9B1BE967CF00564B2F /* HCHackathonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D2B961BE967CF00564B2F /* HCHackathonTableViewController.swift */; };
 		2B1D2B9D1BE967E700564B2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1D2B9C1BE967E700564B2F /* Main.storyboard */; };
+		2B4277371C05DBB200708E9E /* HCCalendarUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4277321C05DA2F00708E9E /* HCCalendarUtility.swift */; };
 		2B9E8F3A1BF274A100148575 /* HCServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E8F391BF274A100148575 /* HCServer.swift */; };
 		2B9E8F3C1BF27A3C00148575 /* HCHackathonProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E8F3B1BF27A3C00148575 /* HCHackathonProvider.swift */; };
 		2BD3B7581BFBD9E3007F6FCF /* HackathonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD3B7561BFBD9E3007F6FCF /* HackathonItem.swift */; };
-		2BD3B7591BFBD9E3007F6FCF /* HackathonItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD3B7571BFBD9E3007F6FCF /* HackathonItem+CoreDataProperties.swift */; };
 		2BD3B75B1BFBD9F3007F6FCF /* HCServerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD3B75A1BFBD9F3007F6FCF /* HCServerTest.swift */; };
 		2BD3B75D1BFBE100007F6FCF /* HackalendarLocationUtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD3B75C1BFBE100007F6FCF /* HackalendarLocationUtilityTests.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1126FE181C04E86D009B828F /* HCDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCDataManager.swift; sourceTree = "<group>"; };
+		1126FE1C1C04FD2C009B828F /* HackathonItem+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HackathonItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		11509CDB1BFBB11300C157A3 /* HCHackathonProviderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCHackathonProviderTest.swift; sourceTree = "<group>"; };
 		11509CDD1BFBB41D00C157A3 /* HCLocationUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCLocationUtility.swift; sourceTree = "<group>"; };
 		2B1D2B5E1BE9679800564B2F /* Hackalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,16 +62,15 @@
 		2B1D2B801BE9679800564B2F /* HackalendarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackalendarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B1D2B841BE9679800564B2F /* HackalendarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackalendarUITests.swift; sourceTree = "<group>"; };
 		2B1D2B861BE9679800564B2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2B1D2B921BE967CF00564B2F /* HCHackathon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCHackathon.swift; sourceTree = "<group>"; };
 		2B1D2B931BE967CF00564B2F /* HCHackathonDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCHackathonDetailViewController.swift; sourceTree = "<group>"; };
 		2B1D2B941BE967CF00564B2F /* HCHackathonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCHackathonTableViewCell.swift; sourceTree = "<group>"; };
 		2B1D2B951BE967CF00564B2F /* HCHackathonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCHackathonTableViewCell.xib; sourceTree = "<group>"; };
 		2B1D2B961BE967CF00564B2F /* HCHackathonTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCHackathonTableViewController.swift; sourceTree = "<group>"; };
 		2B1D2B9C1BE967E700564B2F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2B4277321C05DA2F00708E9E /* HCCalendarUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCCalendarUtility.swift; sourceTree = "<group>"; };
 		2B9E8F391BF274A100148575 /* HCServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCServer.swift; sourceTree = "<group>"; };
 		2B9E8F3B1BF27A3C00148575 /* HCHackathonProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCHackathonProvider.swift; sourceTree = "<group>"; };
 		2BD3B7561BFBD9E3007F6FCF /* HackathonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackathonItem.swift; sourceTree = "<group>"; };
-		2BD3B7571BFBD9E3007F6FCF /* HackathonItem+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HackathonItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2BD3B75A1BFBD9F3007F6FCF /* HCServerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCServerTest.swift; sourceTree = "<group>"; };
 		2BD3B75C1BFBE100007F6FCF /* HackalendarLocationUtilityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackalendarLocationUtilityTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,9 +155,9 @@
 		2B1D2B9E1BE967F200564B2F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2B1D2B961BE967CF00564B2F /* HCHackathonTableViewController.swift */,
 				2B1D2B931BE967CF00564B2F /* HCHackathonDetailViewController.swift */,
 				2B1D2B941BE967CF00564B2F /* HCHackathonTableViewCell.swift */,
-				2B1D2B961BE967CF00564B2F /* HCHackathonTableViewController.swift */,
 				2B1D2B611BE9679800564B2F /* AppDelegate.swift */,
 			);
 			name = Controller;
@@ -166,8 +168,8 @@
 			children = (
 				2B1D2B951BE967CF00564B2F /* HCHackathonTableViewCell.xib */,
 				2B1D2B9C1BE967E700564B2F /* Main.storyboard */,
-				2B1D2B6B1BE9679800564B2F /* Assets.xcassets */,
 				2B1D2B6D1BE9679800564B2F /* LaunchScreen.storyboard */,
+				2B1D2B6B1BE9679800564B2F /* Assets.xcassets */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -175,14 +177,39 @@
 		2B1D2BA01BE9680A00564B2F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2BD3B7561BFBD9E3007F6FCF /* HackathonItem.swift */,
-				2BD3B7571BFBD9E3007F6FCF /* HackathonItem+CoreDataProperties.swift */,
-				2B1D2B921BE967CF00564B2F /* HCHackathon.swift */,
-				2B9E8F391BF274A100148575 /* HCServer.swift */,
 				2B9E8F3B1BF27A3C00148575 /* HCHackathonProvider.swift */,
-				11509CDD1BFBB41D00C157A3 /* HCLocationUtility.swift */,
+				2B4277361C05DA6E00708E9E /* Networking */,
+				2B4277351C05DA5D00708E9E /* Core Data */,
+				2B4277341C05DA3F00708E9E /* Utility */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		2B4277341C05DA3F00708E9E /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				11509CDD1BFBB41D00C157A3 /* HCLocationUtility.swift */,
+				2B4277321C05DA2F00708E9E /* HCCalendarUtility.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		2B4277351C05DA5D00708E9E /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				2BD3B7561BFBD9E3007F6FCF /* HackathonItem.swift */,
+				1126FE1C1C04FD2C009B828F /* HackathonItem+CoreDataProperties.swift */,
+				1126FE181C04E86D009B828F /* HCDataManager.swift */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		2B4277361C05DA6E00708E9E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2B9E8F391BF274A100148575 /* HCServer.swift */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,16 +344,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B4277371C05DBB200708E9E /* HCCalendarUtility.swift in Sources */,
 				2B1D2B991BE967CF00564B2F /* HCHackathonTableViewCell.swift in Sources */,
 				2BD3B7581BFBD9E3007F6FCF /* HackathonItem.swift in Sources */,
+				1126FE191C04E86D009B828F /* HCDataManager.swift in Sources */,
 				2B1D2B9B1BE967CF00564B2F /* HCHackathonTableViewController.swift in Sources */,
 				2B1D2B6A1BE9679800564B2F /* Hackalendar.xcdatamodeld in Sources */,
+				1126FE1D1C04FD2C009B828F /* HackathonItem+CoreDataProperties.swift in Sources */,
 				11509CDE1BFBB41D00C157A3 /* HCLocationUtility.swift in Sources */,
 				2B9E8F3C1BF27A3C00148575 /* HCHackathonProvider.swift in Sources */,
 				2B9E8F3A1BF274A100148575 /* HCServer.swift in Sources */,
 				2B1D2B981BE967CF00564B2F /* HCHackathonDetailViewController.swift in Sources */,
-				2B1D2B971BE967CF00564B2F /* HCHackathon.swift in Sources */,
-				2BD3B7591BFBD9E3007F6FCF /* HackathonItem+CoreDataProperties.swift in Sources */,
 				2B1D2B621BE9679800564B2F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
