@@ -24,7 +24,6 @@ class HCHackathonTableViewController: UITableViewController, HCHackathonTableVie
         self.navigationController?.navigationBar.topItem?.title = "Hackathons"
         
         hackathons = HCHackathonProvider.loadHackathons(currentYear, month: currentMonth)
-        print(hackathons.count)
         
         if hackathons.count == 0 {
          
