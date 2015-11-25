@@ -11,6 +11,9 @@ import CoreData
 
 class HCDataManager: NSObject {
 
+    /**
+        Class function to get the managed object context that we can work on.
+    */
     class func managedObjectContext() -> NSManagedObjectContext {
         
         if let managedObjectContext = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext {
@@ -21,6 +24,9 @@ class HCDataManager: NSObject {
         return NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
     }
     
+    /**
+        Class function to save the modified managed objects on the context
+    */
     class func saveContext() {
         
         let context = managedObjectContext()

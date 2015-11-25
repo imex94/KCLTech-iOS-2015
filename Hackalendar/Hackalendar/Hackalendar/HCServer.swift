@@ -58,5 +58,4 @@ class HCServer: NSObject {
         }
         dataTask.resume()
     }
-    
 }

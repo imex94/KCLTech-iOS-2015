@@ -21,6 +21,7 @@
 		2B1D2B9A1BE967CF00564B2F /* HCHackathonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B1D2B951BE967CF00564B2F /* HCHackathonTableViewCell.xib */; };
 		2B1D2B9B1BE967CF00564B2F /* HCHackathonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D2B961BE967CF00564B2F /* HCHackathonTableViewController.swift */; };
 		2B1D2B9D1BE967E700564B2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1D2B9C1BE967E700564B2F /* Main.storyboard */; };
+		2B4277371C05DBB200708E9E /* HCCalendarUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4277321C05DA2F00708E9E /* HCCalendarUtility.swift */; };
 		2B9E8F3A1BF274A100148575 /* HCServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E8F391BF274A100148575 /* HCServer.swift */; };
 		2B9E8F3C1BF27A3C00148575 /* HCHackathonProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E8F3B1BF27A3C00148575 /* HCHackathonProvider.swift */; };
 		2BD3B7581BFBD9E3007F6FCF /* HackathonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD3B7561BFBD9E3007F6FCF /* HackathonItem.swift */; };
@@ -66,6 +67,7 @@
 		2B1D2B951BE967CF00564B2F /* HCHackathonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCHackathonTableViewCell.xib; sourceTree = "<group>"; };
 		2B1D2B961BE967CF00564B2F /* HCHackathonTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCHackathonTableViewController.swift; sourceTree = "<group>"; };
 		2B1D2B9C1BE967E700564B2F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2B4277321C05DA2F00708E9E /* HCCalendarUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCCalendarUtility.swift; sourceTree = "<group>"; };
 		2B9E8F391BF274A100148575 /* HCServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCServer.swift; sourceTree = "<group>"; };
 		2B9E8F3B1BF27A3C00148575 /* HCHackathonProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCHackathonProvider.swift; sourceTree = "<group>"; };
 		2BD3B7561BFBD9E3007F6FCF /* HackathonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackathonItem.swift; sourceTree = "<group>"; };
@@ -153,9 +155,9 @@
 		2B1D2B9E1BE967F200564B2F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2B1D2B961BE967CF00564B2F /* HCHackathonTableViewController.swift */,
 				2B1D2B931BE967CF00564B2F /* HCHackathonDetailViewController.swift */,
 				2B1D2B941BE967CF00564B2F /* HCHackathonTableViewCell.swift */,
-				2B1D2B961BE967CF00564B2F /* HCHackathonTableViewController.swift */,
 				2B1D2B611BE9679800564B2F /* AppDelegate.swift */,
 			);
 			name = Controller;
@@ -166,8 +168,8 @@
 			children = (
 				2B1D2B951BE967CF00564B2F /* HCHackathonTableViewCell.xib */,
 				2B1D2B9C1BE967E700564B2F /* Main.storyboard */,
-				2B1D2B6B1BE9679800564B2F /* Assets.xcassets */,
 				2B1D2B6D1BE9679800564B2F /* LaunchScreen.storyboard */,
+				2B1D2B6B1BE9679800564B2F /* Assets.xcassets */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -175,14 +177,39 @@
 		2B1D2BA01BE9680A00564B2F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2BD3B7561BFBD9E3007F6FCF /* HackathonItem.swift */,
-				1126FE1C1C04FD2C009B828F /* HackathonItem+CoreDataProperties.swift */,
-				2B9E8F391BF274A100148575 /* HCServer.swift */,
 				2B9E8F3B1BF27A3C00148575 /* HCHackathonProvider.swift */,
-				11509CDD1BFBB41D00C157A3 /* HCLocationUtility.swift */,
-				1126FE181C04E86D009B828F /* HCDataManager.swift */,
+				2B4277361C05DA6E00708E9E /* Networking */,
+				2B4277351C05DA5D00708E9E /* Core Data */,
+				2B4277341C05DA3F00708E9E /* Utility */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		2B4277341C05DA3F00708E9E /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				11509CDD1BFBB41D00C157A3 /* HCLocationUtility.swift */,
+				2B4277321C05DA2F00708E9E /* HCCalendarUtility.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		2B4277351C05DA5D00708E9E /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				2BD3B7561BFBD9E3007F6FCF /* HackathonItem.swift */,
+				1126FE1C1C04FD2C009B828F /* HackathonItem+CoreDataProperties.swift */,
+				1126FE181C04E86D009B828F /* HCDataManager.swift */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		2B4277361C05DA6E00708E9E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2B9E8F391BF274A100148575 /* HCServer.swift */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B4277371C05DBB200708E9E /* HCCalendarUtility.swift in Sources */,
 				2B1D2B991BE967CF00564B2F /* HCHackathonTableViewCell.swift in Sources */,
 				2BD3B7581BFBD9E3007F6FCF /* HackathonItem.swift in Sources */,
 				1126FE191C04E86D009B828F /* HCDataManager.swift in Sources */,
