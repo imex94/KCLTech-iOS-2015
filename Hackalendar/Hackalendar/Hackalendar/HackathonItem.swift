@@ -48,11 +48,15 @@ class HackathonItem: NSManagedObject {
         let predicate = NSPredicate(format: format, argumentArray: args)
         request.predicate = predicate
         
+        var sortArray = [NSSortDescriptor]()
+        
         for keyword in sortKeywords {
             
-            let sort = NSSortDescriptor(key: keyword, ascending: true)
-            request.sortDescriptors?.append(sort)
+            let sort = NSSortDescriptor(key: keyword, ascending: false)
+            sortArray.append(sort)
         }
+        
+        request.sortDescriptors = sortArray
         
         do {
             

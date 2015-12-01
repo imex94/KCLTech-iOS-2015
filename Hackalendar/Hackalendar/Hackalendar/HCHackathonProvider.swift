@@ -22,7 +22,7 @@ class HCHackathonProvider: NSObject {
         
         // --> What I was doing wrong :), we need to have %@, which means that '%@' will be
         // replaced by the elements from the args array in order.
-        return HackathonItem.fetchHackathons("year == %@ && month == %@", args: [year, month], sortKeywords: ["year", "month"])
+        return HackathonItem.fetchHackathons("year == %@ && month == %@", args: [year, month], sortKeywords: ["startDate"])
     }
     
     /**

@@ -20,6 +20,7 @@ class HCHackathonTableViewCell: UITableViewCell {
     @IBOutlet weak var hackathonName: UILabel!
     @IBOutlet weak var hackathonDate: UILabel!
     @IBOutlet weak var HackathonPlace: UILabel!
+    @IBOutlet var labelsView: UIView!
     
     var delegate: HCHackathonTableViewDelegate?
     
@@ -28,6 +29,16 @@ class HCHackathonTableViewCell: UITableViewCell {
         // Initialization code
         
         mapView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("performTransition:")))
+        
+        // Creating a blur effect with dark style
+        let blurEffect = UIBlurEffect(style: .Dark)
+        // Creating a view for the blur effect with the same size of labels view
+        let blurView = UIVisualEffectView(frame: labelsView.frame)
+        // Add effect for the blur view
+        blurView.effect = blurEffect
+        
+        // Insert the blur layer below our existing labels
+        self.contentView.insertSubview(blurView, belowSubview: labelsView)
     }
     
     func performTransition(gesture: UITapGestureRecognizer) {

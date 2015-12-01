@@ -12,15 +12,15 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="260"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="600" height="259"/>
+                <rect key="frame" x="0.0" y="0.0" width="600" height="260"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcc-aL-97R">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
                         <animations/>
                     </mapView>
-                    <view alpha="0.55000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UP3-kt-OfZ">
-                        <rect key="frame" x="0.0" y="200" width="600" height="50"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UP3-kt-OfZ">
+                        <rect key="frame" x="0.0" y="202" width="600" height="50"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HackKing's" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quq-ca-AAv">
                                 <rect key="frame" x="8" y="14" width="200" height="21"/>
@@ -48,7 +48,7 @@
                             </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="VZN-Sc-3hV" firstAttribute="leading" secondItem="UAH-qi-VkM" secondAttribute="trailing" constant="8" symbolic="YES" id="AR4-lT-d8w"/>
                             <constraint firstItem="quq-ca-AAv" firstAttribute="leading" secondItem="UP3-kt-OfZ" secondAttribute="leadingMargin" id="Ck6-4U-Y8N"/>
@@ -68,10 +68,10 @@
                     <constraint firstItem="mcc-aL-97R" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Gvg-HV-nsN"/>
                     <constraint firstItem="UP3-kt-OfZ" firstAttribute="leading" secondItem="mcc-aL-97R" secondAttribute="leading" id="SFe-HC-AKv"/>
                     <constraint firstItem="mcc-aL-97R" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TFb-W9-I2j"/>
-                    <constraint firstItem="mcc-aL-97R" firstAttribute="bottom" secondItem="UP3-kt-OfZ" secondAttribute="bottom" id="awJ-9d-pOU"/>
+                    <constraint firstItem="mcc-aL-97R" firstAttribute="bottom" secondItem="UP3-kt-OfZ" secondAttribute="bottom" constant="-2" id="awJ-9d-pOU"/>
                     <constraint firstAttribute="trailing" secondItem="UP3-kt-OfZ" secondAttribute="trailing" id="cc0-uk-odE"/>
                     <constraint firstItem="mcc-aL-97R" firstAttribute="trailing" secondItem="UP3-kt-OfZ" secondAttribute="trailing" id="ebd-dt-Aya"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="UP3-kt-OfZ" secondAttribute="bottom" constant="1" id="hi7-Se-MNt"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="UP3-kt-OfZ" secondAttribute="bottom" id="hi7-Se-MNt"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>
@@ -79,6 +79,7 @@
                 <outlet property="HackathonPlace" destination="VZN-Sc-3hV" id="K2W-Cj-SkR"/>
                 <outlet property="hackathonDate" destination="UAH-qi-VkM" id="r4f-St-mUf"/>
                 <outlet property="hackathonName" destination="quq-ca-AAv" id="Rj0-fX-sTJ"/>
+                <outlet property="labelsView" destination="UP3-kt-OfZ" id="tfM-T6-bg0"/>
                 <outlet property="mapView" destination="mcc-aL-97R" id="SlC-aS-NHT"/>
             </connections>
             <point key="canvasLocation" x="305" y="451"/>

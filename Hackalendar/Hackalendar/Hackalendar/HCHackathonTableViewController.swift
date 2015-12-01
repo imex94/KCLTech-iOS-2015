@@ -142,6 +142,8 @@ class HCHackathonTableViewController: UITableViewController, HCHackathonTableVie
         
         let destinationViewController = segue.destinationViewController as! HCHackathonDetailViewController
         destinationViewController.title = hackathons[selectedRow].title
+        // Passing the hackathon object to the detail view
+        destinationViewController.hackathon = hackathons[selectedRow]
     }
 
 }
