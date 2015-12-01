@@ -25,7 +25,7 @@ class HCHackathonDetailViewController: UIViewController, UITableViewDelegate, UI
     var urlString1 = "http://facebook.com"
     var urlString2 = "http://twitter.com"
     
-    var hackathon: HCHackathon!
+    var hackathon: HackathonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,31 +54,36 @@ class HCHackathonDetailViewController: UIViewController, UITableViewDelegate, UI
     func changeStatuses(img1: UIImageView, _ img2: UIImageView, _ img3: UIImageView) {
         let isTravelReimburseAvailable = hackathon.travel
         if isTravelReimburseAvailable != nil {
-            if isTravelReimburseAvailable! {
-                img1.image = UIImage(named: "status-yes")
+            
+            switch isTravelReimburseAvailable! {
+                case "yes":
+                    img1.image = UIImage(named: "status-yes")
+            
+                case "unknown":
+                    img1.image = UIImage(named: "status-question")
+                
+                default: break
             }
-        } else {
-            img1.image = UIImage(named: "status-question")
         }
         
-        if hackathon.prize! {
+        if let _ = hackathon.prize?.boolValue {
             img2.image = UIImage(named: "status-yes")
         }
         
-        if hackathon.highSchoolers! {
+        if let _ = hackathon.highSchoolers?.boolValue {
             img3.image = UIImage(named: "status-yes")
         }
     }
     
     func openFBURL() {
         if let url = hackathon.facebookURL {
-            UIApplication.sharedApplication().openURL(url)
+            UIApplication.sharedApplication().openURL(NSURL(string: url)!)
         }
     }
     
     func openTwitterURL() {
         if let url = hackathon.twitterURL {
-            UIApplication.sharedApplication().openURL(url)
+            UIApplication.sharedApplication().openURL(NSURL(string: url)!)
         }
     }
     

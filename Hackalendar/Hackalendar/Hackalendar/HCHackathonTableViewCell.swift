@@ -35,11 +35,16 @@ class HCHackathonTableViewCell: UITableViewCell {
         delegate?.performSegueOnMapClick(tag)
     }
     
-    func addLocation(location: CLLocationCoordinate2D?) {
+    /**
+        Modified the function signature to take a latitude and a longitude, instead of
+        a CLLocationCoordinate2D object, because our HackathonItem has those two attributes. 
+        They can be also nil, if that's the case we won't animate the map to that location.
+    */
+    func addLocation(latitude: Double?, longitude: Double?) {
         
-        if let coordinate = location {
+        if let l1 = latitude, l2 = longitude {
             
-            let region = MKCoordinateRegionMakeWithDistance(coordinate, 5000, 5000)
+            let region = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: l1, longitude: l2), 5000, 5000)
             mapView.setRegion(region, animated: true)
         }
     }

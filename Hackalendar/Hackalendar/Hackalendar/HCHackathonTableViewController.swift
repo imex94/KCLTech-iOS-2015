@@ -11,7 +11,10 @@ import UIKit
 class HCHackathonTableViewController: UITableViewController, HCHackathonTableViewDelegate {
 
     var selectedRow = 0
-    var hackathons = [HCHackathon]()
+    var hackathons = [HackathonItem]()
+    
+    var currentYear = HCCalendarUtility.getCurrentYear()
+    var currentMonth = HCCalendarUtility.getCurrentMonth()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +23,12 @@ class HCHackathonTableViewController: UITableViewController, HCHackathonTableVie
         
         self.navigationController?.navigationBar.topItem?.title = "Hackathons"
         
-        fetchData()
+        hackathons = HCHackathonProvider.loadHackathons(currentYear, month: currentMonth)
+        
+        if hackathons.count == 0 {
+         
+            fetchData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,10 +38,10 @@ class HCHackathonTableViewController: UITableViewController, HCHackathonTableVie
     
     func fetchData() {
         
-        HCHackathonProvider.provideHackathonsFor(11) { (hackathons) -> Void in
+        HCHackathonProvider.provideHackathonsFor(currentYear, month: currentMonth) { (hackathons) -> Void in
             
             self.hackathons.appendContentsOf(hackathons)
-            
+
             self.locateHackathons()
             
             self.tableView.reloadData()
@@ -46,7 +54,14 @@ class HCHackathonTableViewController: UITableViewController, HCHackathonTableVie
             
             HCLocationUtility.locateCityForLocationName(hackathon.city, completitionHandler: { (coordinate) -> Void in
                 
-                hackathon.coordinate = coordinate
+                if let location = coordinate {
+                 
+                    hackathon.latitude = location.latitude
+                    hackathon.longitude = location.longitude
+                    
+                    // Save context again as we changed the managed object's latitude and longitude
+                    HCDataManager.saveContext()
+                }
                 
                 self.tableView.reloadData()
             })
@@ -82,12 +97,16 @@ class HCHackathonTableViewController: UITableViewController, HCHackathonTableVie
         cell.hackathonDate.text = currentHackathon.startDate
         cell.HackathonPlace.text = HCLocationUtility.extractCityNameFromLocation(currentHackathon.city)
 
-        cell.addLocation(currentHackathon.coordinate)
+        cell.addLocation(currentHackathon.latitude?.doubleValue, longitude: currentHackathon.longitude?.doubleValue)
         
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        // This was missing from the previous code, clicking on the transparent view
+        // passed the same hackathon name to the detail view - Now it is fixed
+        selectedRow = indexPath.row
         
         performSegueWithIdentifier("showDetails", sender: self)
         
@@ -108,15 +127,18 @@ class HCHackathonTableViewController: UITableViewController, HCHackathonTableVie
     func performSegueOnMapClick(index: Int) {
         
         selectedRow = index
+        
         performSegueWithIdentifier("showDetails", sender: self)
     }
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    /**
+        In a storyboard-based application, you will often want to do a little preparation before navigation
+        Get the new view controller using segue.destinationViewController.
+        Pass the selected object to the new view controller.
+    */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
         
         let destinationViewController = segue.destinationViewController as! HCHackathonDetailViewController
         destinationViewController.title = hackathons[selectedRow].title
