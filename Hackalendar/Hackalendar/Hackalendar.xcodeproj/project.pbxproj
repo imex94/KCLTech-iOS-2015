@@ -7,12 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1126FE191C04E86D009B828F /* HCDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1126FE181C04E86D009B828F /* HCDataManager.swift */; };
-		1126FE1D1C04FD2C009B828F /* HackathonItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1126FE1C1C04FD2C009B828F /* HackathonItem+CoreDataProperties.swift */; };
 		11509CDC1BFBB11300C157A3 /* HCHackathonProviderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11509CDB1BFBB11300C157A3 /* HCHackathonProviderTest.swift */; };
-		11509CDE1BFBB41D00C157A3 /* HCLocationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11509CDD1BFBB41D00C157A3 /* HCLocationUtility.swift */; };
 		2B1D2B621BE9679800564B2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D2B611BE9679800564B2F /* AppDelegate.swift */; };
-		2B1D2B6A1BE9679800564B2F /* Hackalendar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D2B681BE9679800564B2F /* Hackalendar.xcdatamodeld */; };
 		2B1D2B6C1BE9679800564B2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B1D2B6B1BE9679800564B2F /* Assets.xcassets */; };
 		2B1D2B6F1BE9679800564B2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1D2B6D1BE9679800564B2F /* LaunchScreen.storyboard */; };
 		2B1D2B851BE9679800564B2F /* HackalendarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D2B841BE9679800564B2F /* HackalendarUITests.swift */; };
@@ -21,10 +17,44 @@
 		2B1D2B9A1BE967CF00564B2F /* HCHackathonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B1D2B951BE967CF00564B2F /* HCHackathonTableViewCell.xib */; };
 		2B1D2B9B1BE967CF00564B2F /* HCHackathonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D2B961BE967CF00564B2F /* HCHackathonTableViewController.swift */; };
 		2B1D2B9D1BE967E700564B2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1D2B9C1BE967E700564B2F /* Main.storyboard */; };
-		2B4277371C05DBB200708E9E /* HCCalendarUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4277321C05DA2F00708E9E /* HCCalendarUtility.swift */; };
-		2B9E8F3A1BF274A100148575 /* HCServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E8F391BF274A100148575 /* HCServer.swift */; };
-		2B9E8F3C1BF27A3C00148575 /* HCHackathonProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E8F3B1BF27A3C00148575 /* HCHackathonProvider.swift */; };
-		2BD3B7581BFBD9E3007F6FCF /* HackathonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD3B7561BFBD9E3007F6FCF /* HackathonItem.swift */; };
+		2BA940BD1C16F0AC00AE19B7 /* HackalendarSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BA940BC1C16F0AC00AE19B7 /* HackalendarSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BA940C11C16F0AC00AE19B7 /* HackalendarSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA940BA1C16F0AC00AE19B7 /* HackalendarSDK.framework */; };
+		2BA940C21C16F0AC00AE19B7 /* HackalendarSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA940BA1C16F0AC00AE19B7 /* HackalendarSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2BA940C91C16F0CE00AE19B7 /* HSHackathonItem.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BA940C71C16F0CE00AE19B7 /* HSHackathonItem.xcdatamodeld */; };
+		2BA940CC1C16F1E300AE19B7 /* HSHackathon+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA940CA1C16F1E300AE19B7 /* HSHackathon+CoreDataProperties.swift */; };
+		2BA940CD1C16F1E300AE19B7 /* HSHackathon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA940CB1C16F1E300AE19B7 /* HSHackathon.swift */; };
+		2BA940D01C16F24F00AE19B7 /* HSDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA940CF1C16F24F00AE19B7 /* HSDataManager.swift */; };
+		2BA940D21C16F28700AE19B7 /* HSCoreDataProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA940D11C16F28700AE19B7 /* HSCoreDataProxy.swift */; };
+		2BA940D41C16F3AB00AE19B7 /* HSHackathonProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E8F3B1BF27A3C00148575 /* HSHackathonProvider.swift */; };
+		2BA940D51C16F3AB00AE19B7 /* HSServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E8F391BF274A100148575 /* HSServer.swift */; };
+		2BA940D71C16F45800AE19B7 /* HSLocationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11509CDD1BFBB41D00C157A3 /* HSLocationUtility.swift */; };
+		2BA940D81C16F45800AE19B7 /* HSCalendarUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4277321C05DA2F00708E9E /* HSCalendarUtility.swift */; };
+		2BA940E01C16FC0700AE19B7 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA940DE1C16FC0700AE19B7 /* Interface.storyboard */; };
+		2BA940E21C16FC0700AE19B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BA940E11C16FC0700AE19B7 /* Assets.xcassets */; };
+		2BA940E91C16FC0700AE19B7 /* Hackalendar for Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2BA940E81C16FC0700AE19B7 /* Hackalendar for Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2BA940EE1C16FC0700AE19B7 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA940ED1C16FC0700AE19B7 /* InterfaceController.swift */; };
+		2BA940F01C16FC0700AE19B7 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA940EF1C16FC0700AE19B7 /* ExtensionDelegate.swift */; };
+		2BA940F21C16FC0700AE19B7 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA940F11C16FC0700AE19B7 /* ComplicationController.swift */; };
+		2BA940F41C16FC0700AE19B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BA940F31C16FC0700AE19B7 /* Assets.xcassets */; };
+		2BA940F81C16FC0700AE19B7 /* Hackalendar for Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2BA940DC1C16FC0600AE19B7 /* Hackalendar for Watch.app */; };
+		2BA941031C16FD1800AE19B7 /* HCWHackathonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA941021C16FD1800AE19B7 /* HCWHackathonRow.swift */; };
+		2BA9410F1C17003600AE19B7 /* HackalendarWatchSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BA9410E1C17003600AE19B7 /* HackalendarWatchSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BA941131C17003600AE19B7 /* HackalendarWatchSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA9410C1C17003600AE19B7 /* HackalendarWatchSDK.framework */; };
+		2BA941141C17003600AE19B7 /* HackalendarWatchSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA9410C1C17003600AE19B7 /* HackalendarWatchSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2BA9411D1C17012400AE19B7 /* HSCalendarUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4277321C05DA2F00708E9E /* HSCalendarUtility.swift */; };
+		2BA9411E1C17012700AE19B7 /* HSHackathonProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E8F3B1BF27A3C00148575 /* HSHackathonProvider.swift */; };
+		2BA9411F1C17012900AE19B7 /* HSServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E8F391BF274A100148575 /* HSServer.swift */; };
+		2BA941201C17013100AE19B7 /* HSHackathonItem.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BA940C71C16F0CE00AE19B7 /* HSHackathonItem.xcdatamodeld */; };
+		2BA941211C17013600AE19B7 /* HSHackathon+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA940CA1C16F1E300AE19B7 /* HSHackathon+CoreDataProperties.swift */; };
+		2BA941221C17013800AE19B7 /* HSHackathon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA940CB1C16F1E300AE19B7 /* HSHackathon.swift */; };
+		2BA941231C17013B00AE19B7 /* HSDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA940CF1C16F24F00AE19B7 /* HSDataManager.swift */; };
+		2BA941241C17013D00AE19B7 /* HSCoreDataProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA940D11C16F28700AE19B7 /* HSCoreDataProxy.swift */; };
+		2BA941261C17035E00AE19B7 /* HSWLocationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA941251C17035E00AE19B7 /* HSWLocationUtility.swift */; };
+		2BA941291C171AC200AE19B7 /* HSConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA941281C171AC200AE19B7 /* HSConnectivity.swift */; };
+		2BA9412A1C171AC200AE19B7 /* HSConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA941281C171AC200AE19B7 /* HSConnectivity.swift */; };
+		2BA9412D1C172D6000AE19B7 /* HSHackathonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA9412C1C172D6000AE19B7 /* HSHackathonObject.swift */; };
+		2BA9412E1C172D6000AE19B7 /* HSHackathonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA9412C1C172D6000AE19B7 /* HSHackathonObject.swift */; };
+		2BA941301C173A1D00AE19B7 /* DetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA9412F1C173A1D00AE19B7 /* DetailInterfaceController.swift */; };
 		2BD3B75B1BFBD9F3007F6FCF /* HCServerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD3B75A1BFBD9F3007F6FCF /* HCServerTest.swift */; };
 		2BD3B75D1BFBE100007F6FCF /* HackalendarLocationUtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD3B75C1BFBE100007F6FCF /* HackalendarLocationUtilityTests.swift */; };
 /* End PBXBuildFile section */
@@ -44,16 +74,88 @@
 			remoteGlobalIDString = 2B1D2B5D1BE9679800564B2F;
 			remoteInfo = Hackalendar;
 		};
+		2BA940BF1C16F0AC00AE19B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B1D2B561BE9679800564B2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BA940B91C16F0AC00AE19B7;
+			remoteInfo = HackalendarSDK;
+		};
+		2BA940EA1C16FC0700AE19B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B1D2B561BE9679800564B2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BA940E71C16FC0700AE19B7;
+			remoteInfo = "Hackalendar for Watch Extension";
+		};
+		2BA940F61C16FC0700AE19B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B1D2B561BE9679800564B2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BA940DB1C16FC0600AE19B7;
+			remoteInfo = "Hackalendar for Watch";
+		};
+		2BA941111C17003600AE19B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B1D2B561BE9679800564B2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BA9410B1C17003600AE19B7;
+			remoteInfo = HackalendarWatchSDK;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2BA940C61C16F0AC00AE19B7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2BA940C21C16F0AC00AE19B7 /* HackalendarSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA940FC1C16FC0700AE19B7 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2BA940E91C16FC0700AE19B7 /* Hackalendar for Watch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA941001C16FC0700AE19B7 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				2BA940F81C16FC0700AE19B7 /* Hackalendar for Watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA941181C17003700AE19B7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2BA941141C17003600AE19B7 /* HackalendarWatchSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		1126FE181C04E86D009B828F /* HCDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCDataManager.swift; sourceTree = "<group>"; };
-		1126FE1C1C04FD2C009B828F /* HackathonItem+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HackathonItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		11509CDB1BFBB11300C157A3 /* HCHackathonProviderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCHackathonProviderTest.swift; sourceTree = "<group>"; };
-		11509CDD1BFBB41D00C157A3 /* HCLocationUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCLocationUtility.swift; sourceTree = "<group>"; };
+		11509CDD1BFBB41D00C157A3 /* HSLocationUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HSLocationUtility.swift; path = ../Hackalendar/HSLocationUtility.swift; sourceTree = "<group>"; };
 		2B1D2B5E1BE9679800564B2F /* Hackalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B1D2B611BE9679800564B2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2B1D2B691BE9679800564B2F /* Hackalendar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hackalendar.xcdatamodel; sourceTree = "<group>"; };
 		2B1D2B6B1BE9679800564B2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B1D2B6E1BE9679800564B2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B1D2B701BE9679800564B2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,10 +169,38 @@
 		2B1D2B951BE967CF00564B2F /* HCHackathonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCHackathonTableViewCell.xib; sourceTree = "<group>"; };
 		2B1D2B961BE967CF00564B2F /* HCHackathonTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCHackathonTableViewController.swift; sourceTree = "<group>"; };
 		2B1D2B9C1BE967E700564B2F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		2B4277321C05DA2F00708E9E /* HCCalendarUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCCalendarUtility.swift; sourceTree = "<group>"; };
-		2B9E8F391BF274A100148575 /* HCServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCServer.swift; sourceTree = "<group>"; };
-		2B9E8F3B1BF27A3C00148575 /* HCHackathonProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCHackathonProvider.swift; sourceTree = "<group>"; };
-		2BD3B7561BFBD9E3007F6FCF /* HackathonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackathonItem.swift; sourceTree = "<group>"; };
+		2B4277321C05DA2F00708E9E /* HSCalendarUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HSCalendarUtility.swift; path = ../Hackalendar/HSCalendarUtility.swift; sourceTree = "<group>"; };
+		2B9E8F391BF274A100148575 /* HSServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HSServer.swift; path = ../Hackalendar/HSServer.swift; sourceTree = "<group>"; };
+		2B9E8F3B1BF27A3C00148575 /* HSHackathonProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HSHackathonProvider.swift; path = ../Hackalendar/HSHackathonProvider.swift; sourceTree = "<group>"; };
+		2BA940BA1C16F0AC00AE19B7 /* HackalendarSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HackalendarSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BA940BC1C16F0AC00AE19B7 /* HackalendarSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HackalendarSDK.h; sourceTree = "<group>"; };
+		2BA940BE1C16F0AC00AE19B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = HackalendarSDK/Info.plist; sourceTree = "<group>"; };
+		2BA940C81C16F0CE00AE19B7 /* HSHackathonItem.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HSHackathonItem.xcdatamodel; sourceTree = "<group>"; };
+		2BA940CA1C16F1E300AE19B7 /* HSHackathon+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HSHackathon+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2BA940CB1C16F1E300AE19B7 /* HSHackathon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSHackathon.swift; sourceTree = "<group>"; };
+		2BA940CF1C16F24F00AE19B7 /* HSDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSDataManager.swift; sourceTree = "<group>"; };
+		2BA940D11C16F28700AE19B7 /* HSCoreDataProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSCoreDataProxy.swift; sourceTree = "<group>"; };
+		2BA940D91C16F6B300AE19B7 /* Hackalendar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Hackalendar.entitlements; sourceTree = "<group>"; };
+		2BA940DC1C16FC0600AE19B7 /* Hackalendar for Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hackalendar for Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BA940DF1C16FC0700AE19B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		2BA940E11C16FC0700AE19B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BA940E31C16FC0700AE19B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BA940E81C16FC0700AE19B7 /* Hackalendar for Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Hackalendar for Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BA940ED1C16FC0700AE19B7 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		2BA940EF1C16FC0700AE19B7 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		2BA940F11C16FC0700AE19B7 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		2BA940F31C16FC0700AE19B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BA940F51C16FC0700AE19B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BA941011C16FC8300AE19B7 /* Hackalendar for Watch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Hackalendar for Watch Extension.entitlements"; sourceTree = "<group>"; };
+		2BA941021C16FD1800AE19B7 /* HCWHackathonRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCWHackathonRow.swift; sourceTree = "<group>"; };
+		2BA9410C1C17003600AE19B7 /* HackalendarWatchSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HackalendarWatchSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BA9410E1C17003600AE19B7 /* HackalendarWatchSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HackalendarWatchSDK.h; sourceTree = "<group>"; };
+		2BA941101C17003600AE19B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BA941251C17035E00AE19B7 /* HSWLocationUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSWLocationUtility.swift; sourceTree = "<group>"; };
+		2BA941271C17046400AE19B7 /* Hackalendar for Watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Hackalendar for Watch.entitlements"; sourceTree = "<group>"; };
+		2BA941281C171AC200AE19B7 /* HSConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSConnectivity.swift; sourceTree = "<group>"; };
+		2BA9412C1C172D6000AE19B7 /* HSHackathonObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSHackathonObject.swift; sourceTree = "<group>"; };
+		2BA9412F1C173A1D00AE19B7 /* DetailInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInterfaceController.swift; sourceTree = "<group>"; };
 		2BD3B75A1BFBD9F3007F6FCF /* HCServerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCServerTest.swift; sourceTree = "<group>"; };
 		2BD3B75C1BFBE100007F6FCF /* HackalendarLocationUtilityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackalendarLocationUtilityTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +210,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BA940C11C16F0AC00AE19B7 /* HackalendarSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +228,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2BA940B61C16F0AC00AE19B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA940E51C16FC0700AE19B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA941131C17003600AE19B7 /* HackalendarWatchSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA941081C17003600AE19B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -106,6 +259,11 @@
 				2B1D2B601BE9679800564B2F /* Hackalendar */,
 				2B1D2B781BE9679800564B2F /* HackalendarTests */,
 				2B1D2B831BE9679800564B2F /* HackalendarUITests */,
+				2BA940BB1C16F0AC00AE19B7 /* HackalendarSDK */,
+				2BA940BE1C16F0AC00AE19B7 /* Info.plist */,
+				2BA940DD1C16FC0700AE19B7 /* Hackalendar for Watch */,
+				2BA940EC1C16FC0700AE19B7 /* Hackalendar for Watch Extension */,
+				2BA9410D1C17003600AE19B7 /* HackalendarWatchSDK */,
 				2B1D2B5F1BE9679800564B2F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,6 +274,10 @@
 				2B1D2B5E1BE9679800564B2F /* Hackalendar.app */,
 				2B1D2B751BE9679800564B2F /* HackalendarTests.xctest */,
 				2B1D2B801BE9679800564B2F /* HackalendarUITests.xctest */,
+				2BA940BA1C16F0AC00AE19B7 /* HackalendarSDK.framework */,
+				2BA940DC1C16FC0600AE19B7 /* Hackalendar for Watch.app */,
+				2BA940E81C16FC0700AE19B7 /* Hackalendar for Watch Extension.appex */,
+				2BA9410C1C17003600AE19B7 /* HackalendarWatchSDK.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,11 +285,11 @@
 		2B1D2B601BE9679800564B2F /* Hackalendar */ = {
 			isa = PBXGroup;
 			children = (
+				2BA940D91C16F6B300AE19B7 /* Hackalendar.entitlements */,
 				2B1D2BA01BE9680A00564B2F /* Model */,
 				2B1D2B9F1BE9680500564B2F /* View */,
 				2B1D2B9E1BE967F200564B2F /* Controller */,
 				2B1D2B701BE9679800564B2F /* Info.plist */,
-				2B1D2B681BE9679800564B2F /* Hackalendar.xcdatamodeld */,
 			);
 			path = Hackalendar;
 			sourceTree = "<group>";
@@ -177,42 +339,117 @@
 		2B1D2BA01BE9680A00564B2F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2B9E8F3B1BF27A3C00148575 /* HCHackathonProvider.swift */,
-				2B4277361C05DA6E00708E9E /* Networking */,
-				2B4277351C05DA5D00708E9E /* Core Data */,
-				2B4277341C05DA3F00708E9E /* Utility */,
 			);
 			name = Model;
 			sourceTree = "<group>";
 		};
-		2B4277341C05DA3F00708E9E /* Utility */ = {
+		2BA940BB1C16F0AC00AE19B7 /* HackalendarSDK */ = {
 			isa = PBXGroup;
 			children = (
-				11509CDD1BFBB41D00C157A3 /* HCLocationUtility.swift */,
-				2B4277321C05DA2F00708E9E /* HCCalendarUtility.swift */,
+				2BA9412B1C171C4B00AE19B7 /* Connectivity */,
+				2BA940BC1C16F0AC00AE19B7 /* HackalendarSDK.h */,
+				2BA940D61C16F42200AE19B7 /* Utilities */,
+				2BA940D31C16F39800AE19B7 /* Networking */,
+				2BA940CE1C16F1ED00AE19B7 /* CoreData */,
 			);
-			name = Utility;
+			path = HackalendarSDK;
 			sourceTree = "<group>";
 		};
-		2B4277351C05DA5D00708E9E /* Core Data */ = {
+		2BA940CE1C16F1ED00AE19B7 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				2BD3B7561BFBD9E3007F6FCF /* HackathonItem.swift */,
-				1126FE1C1C04FD2C009B828F /* HackathonItem+CoreDataProperties.swift */,
-				1126FE181C04E86D009B828F /* HCDataManager.swift */,
+				2BA940C71C16F0CE00AE19B7 /* HSHackathonItem.xcdatamodeld */,
+				2BA940CA1C16F1E300AE19B7 /* HSHackathon+CoreDataProperties.swift */,
+				2BA940CB1C16F1E300AE19B7 /* HSHackathon.swift */,
+				2BA940CF1C16F24F00AE19B7 /* HSDataManager.swift */,
+				2BA940D11C16F28700AE19B7 /* HSCoreDataProxy.swift */,
 			);
-			name = "Core Data";
+			name = CoreData;
 			sourceTree = "<group>";
 		};
-		2B4277361C05DA6E00708E9E /* Networking */ = {
+		2BA940D31C16F39800AE19B7 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				2B9E8F391BF274A100148575 /* HCServer.swift */,
+				2B9E8F3B1BF27A3C00148575 /* HSHackathonProvider.swift */,
+				2B9E8F391BF274A100148575 /* HSServer.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
 		};
+		2BA940D61C16F42200AE19B7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				11509CDD1BFBB41D00C157A3 /* HSLocationUtility.swift */,
+				2B4277321C05DA2F00708E9E /* HSCalendarUtility.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		2BA940DD1C16FC0700AE19B7 /* Hackalendar for Watch */ = {
+			isa = PBXGroup;
+			children = (
+				2BA941271C17046400AE19B7 /* Hackalendar for Watch.entitlements */,
+				2BA940DE1C16FC0700AE19B7 /* Interface.storyboard */,
+				2BA940E11C16FC0700AE19B7 /* Assets.xcassets */,
+				2BA940E31C16FC0700AE19B7 /* Info.plist */,
+			);
+			path = "Hackalendar for Watch";
+			sourceTree = "<group>";
+		};
+		2BA940EC1C16FC0700AE19B7 /* Hackalendar for Watch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2BA941011C16FC8300AE19B7 /* Hackalendar for Watch Extension.entitlements */,
+				2BA940ED1C16FC0700AE19B7 /* InterfaceController.swift */,
+				2BA940EF1C16FC0700AE19B7 /* ExtensionDelegate.swift */,
+				2BA940F11C16FC0700AE19B7 /* ComplicationController.swift */,
+				2BA941021C16FD1800AE19B7 /* HCWHackathonRow.swift */,
+				2BA940F31C16FC0700AE19B7 /* Assets.xcassets */,
+				2BA940F51C16FC0700AE19B7 /* Info.plist */,
+				2BA9412F1C173A1D00AE19B7 /* DetailInterfaceController.swift */,
+			);
+			path = "Hackalendar for Watch Extension";
+			sourceTree = "<group>";
+		};
+		2BA9410D1C17003600AE19B7 /* HackalendarWatchSDK */ = {
+			isa = PBXGroup;
+			children = (
+				2BA9410E1C17003600AE19B7 /* HackalendarWatchSDK.h */,
+				2BA941101C17003600AE19B7 /* Info.plist */,
+				2BA941251C17035E00AE19B7 /* HSWLocationUtility.swift */,
+			);
+			path = HackalendarWatchSDK;
+			sourceTree = "<group>";
+		};
+		2BA9412B1C171C4B00AE19B7 /* Connectivity */ = {
+			isa = PBXGroup;
+			children = (
+				2BA941281C171AC200AE19B7 /* HSConnectivity.swift */,
+				2BA9412C1C172D6000AE19B7 /* HSHackathonObject.swift */,
+			);
+			name = Connectivity;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2BA940B71C16F0AC00AE19B7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA940BD1C16F0AC00AE19B7 /* HackalendarSDK.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA941091C17003600AE19B7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA9410F1C17003600AE19B7 /* HackalendarWatchSDK.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		2B1D2B5D1BE9679800564B2F /* Hackalendar */ = {
@@ -222,10 +459,14 @@
 				2B1D2B5A1BE9679800564B2F /* Sources */,
 				2B1D2B5B1BE9679800564B2F /* Frameworks */,
 				2B1D2B5C1BE9679800564B2F /* Resources */,
+				2BA940C61C16F0AC00AE19B7 /* Embed Frameworks */,
+				2BA941001C16FC0700AE19B7 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2BA940C01C16F0AC00AE19B7 /* PBXTargetDependency */,
+				2BA940F71C16FC0700AE19B7 /* PBXTargetDependency */,
 			);
 			name = Hackalendar;
 			productName = Hackalendar;
@@ -268,6 +509,78 @@
 			productReference = 2B1D2B801BE9679800564B2F /* HackalendarUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		2BA940B91C16F0AC00AE19B7 /* HackalendarSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BA940C51C16F0AC00AE19B7 /* Build configuration list for PBXNativeTarget "HackalendarSDK" */;
+			buildPhases = (
+				2BA940B51C16F0AC00AE19B7 /* Sources */,
+				2BA940B61C16F0AC00AE19B7 /* Frameworks */,
+				2BA940B71C16F0AC00AE19B7 /* Headers */,
+				2BA940B81C16F0AC00AE19B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HackalendarSDK;
+			productName = HackalendarSDK;
+			productReference = 2BA940BA1C16F0AC00AE19B7 /* HackalendarSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2BA940DB1C16FC0600AE19B7 /* Hackalendar for Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BA940FD1C16FC0700AE19B7 /* Build configuration list for PBXNativeTarget "Hackalendar for Watch" */;
+			buildPhases = (
+				2BA940DA1C16FC0600AE19B7 /* Resources */,
+				2BA940FC1C16FC0700AE19B7 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BA940EB1C16FC0700AE19B7 /* PBXTargetDependency */,
+			);
+			name = "Hackalendar for Watch";
+			productName = "Hackalendar for Watch";
+			productReference = 2BA940DC1C16FC0600AE19B7 /* Hackalendar for Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		2BA940E71C16FC0700AE19B7 /* Hackalendar for Watch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BA940F91C16FC0700AE19B7 /* Build configuration list for PBXNativeTarget "Hackalendar for Watch Extension" */;
+			buildPhases = (
+				2BA940E41C16FC0700AE19B7 /* Sources */,
+				2BA940E51C16FC0700AE19B7 /* Frameworks */,
+				2BA940E61C16FC0700AE19B7 /* Resources */,
+				2BA941181C17003700AE19B7 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BA941121C17003600AE19B7 /* PBXTargetDependency */,
+			);
+			name = "Hackalendar for Watch Extension";
+			productName = "Hackalendar for Watch Extension";
+			productReference = 2BA940E81C16FC0700AE19B7 /* Hackalendar for Watch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		2BA9410B1C17003600AE19B7 /* HackalendarWatchSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BA941151C17003700AE19B7 /* Build configuration list for PBXNativeTarget "HackalendarWatchSDK" */;
+			buildPhases = (
+				2BA941071C17003600AE19B7 /* Sources */,
+				2BA941081C17003600AE19B7 /* Frameworks */,
+				2BA941091C17003600AE19B7 /* Headers */,
+				2BA9410A1C17003600AE19B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HackalendarWatchSDK;
+			productName = HackalendarWatchSDK;
+			productReference = 2BA9410C1C17003600AE19B7 /* HackalendarWatchSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -280,6 +593,12 @@
 				TargetAttributes = {
 					2B1D2B5D1BE9679800564B2F = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = P5UPNMJK39;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					2B1D2B741BE9679800564B2F = {
 						CreatedOnToolsVersion = 7.1;
@@ -288,6 +607,31 @@
 					2B1D2B7F1BE9679800564B2F = {
 						CreatedOnToolsVersion = 7.1;
 						TestTargetID = 2B1D2B5D1BE9679800564B2F;
+					};
+					2BA940B91C16F0AC00AE19B7 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					2BA940DB1C16FC0600AE19B7 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = P5UPNMJK39;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+					2BA940E71C16FC0700AE19B7 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = P5UPNMJK39;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					2BA9410B1C17003600AE19B7 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = P5UPNMJK39;
 					};
 				};
 			};
@@ -307,6 +651,10 @@
 				2B1D2B5D1BE9679800564B2F /* Hackalendar */,
 				2B1D2B741BE9679800564B2F /* HackalendarTests */,
 				2B1D2B7F1BE9679800564B2F /* HackalendarUITests */,
+				2BA940B91C16F0AC00AE19B7 /* HackalendarSDK */,
+				2BA940DB1C16FC0600AE19B7 /* Hackalendar for Watch */,
+				2BA940E71C16FC0700AE19B7 /* Hackalendar for Watch Extension */,
+				2BA9410B1C17003600AE19B7 /* HackalendarWatchSDK */,
 			);
 		};
 /* End PBXProject section */
@@ -337,6 +685,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2BA940B81C16F0AC00AE19B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA940DA1C16FC0600AE19B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA940E21C16FC0700AE19B7 /* Assets.xcassets in Resources */,
+				2BA940E01C16FC0700AE19B7 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA940E61C16FC0700AE19B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA940F41C16FC0700AE19B7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA9410A1C17003600AE19B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -344,16 +723,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B4277371C05DBB200708E9E /* HCCalendarUtility.swift in Sources */,
 				2B1D2B991BE967CF00564B2F /* HCHackathonTableViewCell.swift in Sources */,
-				2BD3B7581BFBD9E3007F6FCF /* HackathonItem.swift in Sources */,
-				1126FE191C04E86D009B828F /* HCDataManager.swift in Sources */,
 				2B1D2B9B1BE967CF00564B2F /* HCHackathonTableViewController.swift in Sources */,
-				2B1D2B6A1BE9679800564B2F /* Hackalendar.xcdatamodeld in Sources */,
-				1126FE1D1C04FD2C009B828F /* HackathonItem+CoreDataProperties.swift in Sources */,
-				11509CDE1BFBB41D00C157A3 /* HCLocationUtility.swift in Sources */,
-				2B9E8F3C1BF27A3C00148575 /* HCHackathonProvider.swift in Sources */,
-				2B9E8F3A1BF274A100148575 /* HCServer.swift in Sources */,
 				2B1D2B981BE967CF00564B2F /* HCHackathonDetailViewController.swift in Sources */,
 				2B1D2B621BE9679800564B2F /* AppDelegate.swift in Sources */,
 			);
@@ -377,6 +748,54 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2BA940B51C16F0AC00AE19B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA940CD1C16F1E300AE19B7 /* HSHackathon.swift in Sources */,
+				2BA940D41C16F3AB00AE19B7 /* HSHackathonProvider.swift in Sources */,
+				2BA940D71C16F45800AE19B7 /* HSLocationUtility.swift in Sources */,
+				2BA941291C171AC200AE19B7 /* HSConnectivity.swift in Sources */,
+				2BA940D81C16F45800AE19B7 /* HSCalendarUtility.swift in Sources */,
+				2BA940D21C16F28700AE19B7 /* HSCoreDataProxy.swift in Sources */,
+				2BA940D51C16F3AB00AE19B7 /* HSServer.swift in Sources */,
+				2BA940CC1C16F1E300AE19B7 /* HSHackathon+CoreDataProperties.swift in Sources */,
+				2BA940D01C16F24F00AE19B7 /* HSDataManager.swift in Sources */,
+				2BA9412D1C172D6000AE19B7 /* HSHackathonObject.swift in Sources */,
+				2BA940C91C16F0CE00AE19B7 /* HSHackathonItem.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA940E41C16FC0700AE19B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA940F01C16FC0700AE19B7 /* ExtensionDelegate.swift in Sources */,
+				2BA940EE1C16FC0700AE19B7 /* InterfaceController.swift in Sources */,
+				2BA940F21C16FC0700AE19B7 /* ComplicationController.swift in Sources */,
+				2BA941031C16FD1800AE19B7 /* HCWHackathonRow.swift in Sources */,
+				2BA941301C173A1D00AE19B7 /* DetailInterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA941071C17003600AE19B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA941221C17013800AE19B7 /* HSHackathon.swift in Sources */,
+				2BA941211C17013600AE19B7 /* HSHackathon+CoreDataProperties.swift in Sources */,
+				2BA941241C17013D00AE19B7 /* HSCoreDataProxy.swift in Sources */,
+				2BA9412A1C171AC200AE19B7 /* HSConnectivity.swift in Sources */,
+				2BA9411E1C17012700AE19B7 /* HSHackathonProvider.swift in Sources */,
+				2BA9411D1C17012400AE19B7 /* HSCalendarUtility.swift in Sources */,
+				2BA941201C17013100AE19B7 /* HSHackathonItem.xcdatamodeld in Sources */,
+				2BA941261C17035E00AE19B7 /* HSWLocationUtility.swift in Sources */,
+				2BA941231C17013B00AE19B7 /* HSDataManager.swift in Sources */,
+				2BA9412E1C172D6000AE19B7 /* HSHackathonObject.swift in Sources */,
+				2BA9411F1C17012900AE19B7 /* HSServer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -390,6 +809,26 @@
 			target = 2B1D2B5D1BE9679800564B2F /* Hackalendar */;
 			targetProxy = 2B1D2B811BE9679800564B2F /* PBXContainerItemProxy */;
 		};
+		2BA940C01C16F0AC00AE19B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BA940B91C16F0AC00AE19B7 /* HackalendarSDK */;
+			targetProxy = 2BA940BF1C16F0AC00AE19B7 /* PBXContainerItemProxy */;
+		};
+		2BA940EB1C16FC0700AE19B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BA940E71C16FC0700AE19B7 /* Hackalendar for Watch Extension */;
+			targetProxy = 2BA940EA1C16FC0700AE19B7 /* PBXContainerItemProxy */;
+		};
+		2BA940F71C16FC0700AE19B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BA940DB1C16FC0600AE19B7 /* Hackalendar for Watch */;
+			targetProxy = 2BA940F61C16FC0700AE19B7 /* PBXContainerItemProxy */;
+		};
+		2BA941121C17003600AE19B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BA9410B1C17003600AE19B7 /* HackalendarWatchSDK */;
+			targetProxy = 2BA941111C17003600AE19B7 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -399,6 +838,14 @@
 				2B1D2B6E1BE9679800564B2F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2BA940DE1C16FC0700AE19B7 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BA940DF1C16FC0700AE19B7 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -491,6 +938,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Hackalendar/Hackalendar.entitlements;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Hackalendar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kcltech.Hackalendar;
@@ -502,6 +951,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Hackalendar/Hackalendar.entitlements;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Hackalendar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kcltech.Hackalendar;
@@ -557,6 +1008,165 @@
 			};
 			name = Release;
 		};
+		2BA940C31C16F0AC00AE19B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HackalendarSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kcltech.HackalendarSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2BA940C41C16F0AC00AE19B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HackalendarSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kcltech.HackalendarSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2BA940FA1C16FC0700AE19B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Hackalendar for Watch Extension/Hackalendar for Watch Extension.entitlements";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = "Hackalendar for Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kcltech.Hackalendar.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		2BA940FB1C16FC0700AE19B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Hackalendar for Watch Extension/Hackalendar for Watch Extension.entitlements";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = "Hackalendar for Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kcltech.Hackalendar.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		2BA940FE1C16FC0700AE19B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = Hackalendar_for_Watch_Extension;
+				INFOPLIST_FILE = "Hackalendar for Watch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kcltech.Hackalendar.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		2BA940FF1C16FC0700AE19B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = Hackalendar_for_Watch_Extension;
+				INFOPLIST_FILE = "Hackalendar for Watch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kcltech.Hackalendar.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		2BA941161C17003700AE19B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HackalendarWatchSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kcltech.HackalendarWatchSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		2BA941171C17003700AE19B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HackalendarWatchSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kcltech.HackalendarWatchSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -596,16 +1206,48 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		2BA940C51C16F0AC00AE19B7 /* Build configuration list for PBXNativeTarget "HackalendarSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BA940C31C16F0AC00AE19B7 /* Debug */,
+				2BA940C41C16F0AC00AE19B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2BA940F91C16FC0700AE19B7 /* Build configuration list for PBXNativeTarget "Hackalendar for Watch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BA940FA1C16FC0700AE19B7 /* Debug */,
+				2BA940FB1C16FC0700AE19B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2BA940FD1C16FC0700AE19B7 /* Build configuration list for PBXNativeTarget "Hackalendar for Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BA940FE1C16FC0700AE19B7 /* Debug */,
+				2BA940FF1C16FC0700AE19B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2BA941151C17003700AE19B7 /* Build configuration list for PBXNativeTarget "HackalendarWatchSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BA941161C17003700AE19B7 /* Debug */,
+				2BA941171C17003700AE19B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		2B1D2B681BE9679800564B2F /* Hackalendar.xcdatamodeld */ = {
+		2BA940C71C16F0CE00AE19B7 /* HSHackathonItem.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				2B1D2B691BE9679800564B2F /* Hackalendar.xcdatamodel */,
+				2BA940C81C16F0CE00AE19B7 /* HSHackathonItem.xcdatamodel */,
 			);
-			currentVersion = 2B1D2B691BE9679800564B2F /* Hackalendar.xcdatamodel */;
-			path = Hackalendar.xcdatamodeld;
+			currentVersion = 2BA940C81C16F0CE00AE19B7 /* HSHackathonItem.xcdatamodel */;
+			path = HSHackathonItem.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import HackalendarSDK
 
 class HCHackathonTableViewController: UITableViewController, HCHackathonTableViewDelegate {
 
     var selectedRow = 0
-    var hackathons = [HackathonItem]()
+    var hackathons = [HSHackathon]()
     
-    var currentYear = HCCalendarUtility.getCurrentYear()
-    var currentMonth = HCCalendarUtility.getCurrentMonth()
+    var currentYear = HSCalendarUtility.getCurrentYear()
+    var currentMonth = HSCalendarUtility.getCurrentMonth()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,7 @@ class HCHackathonTableViewController: UITableViewController, HCHackathonTableVie
         
         self.navigationController?.navigationBar.topItem?.title = "Hackathons"
         
-        hackathons = HCHackathonProvider.loadHackathons(currentYear, month: currentMonth)
+        hackathons = HSHackathonProvider.loadHackathons(currentYear, month: currentMonth)
         
         if hackathons.count == 0 {
          
@@ -38,7 +39,7 @@ class HCHackathonTableViewController: UITableViewController, HCHackathonTableVie
     
     func fetchData() {
         
-        HCHackathonProvider.provideHackathonsFor(currentYear, month: currentMonth) { (hackathons) -> Void in
+        HSHackathonProvider.provideHackathonsFor(currentYear, month: currentMonth) { (hackathons) -> Void in
             
             self.hackathons.appendContentsOf(hackathons)
 
@@ -52,7 +53,7 @@ class HCHackathonTableViewController: UITableViewController, HCHackathonTableVie
         
         for hackathon in hackathons {
             
-            HCLocationUtility.locateCityForLocationName(hackathon.city, completitionHandler: { (coordinate) -> Void in
+            HSLocationUtility.locateCityForLocationName(hackathon.city, completitionHandler: { (coordinate) -> Void in
                 
                 if let location = coordinate {
                  
@@ -60,7 +61,7 @@ class HCHackathonTableViewController: UITableViewController, HCHackathonTableVie
                     hackathon.longitude = location.longitude
                     
                     // Save context again as we changed the managed object's latitude and longitude
-                    HCDataManager.saveContext()
+                    HSDataManager.saveContext()
                 }
                 
                 self.tableView.reloadData()
@@ -95,7 +96,7 @@ class HCHackathonTableViewController: UITableViewController, HCHackathonTableVie
         cell.tag = indexPath.row
         cell.hackathonName.text = currentHackathon.title
         cell.hackathonDate.text = currentHackathon.startDate
-        cell.HackathonPlace.text = HCLocationUtility.extractCityNameFromLocation(currentHackathon.city)
+        cell.HackathonPlace.text = HSLocationUtility.extractCityNameFromLocation(currentHackathon.city)
 
         cell.addLocation(currentHackathon.latitude?.doubleValue, longitude: currentHackathon.longitude?.doubleValue)
         

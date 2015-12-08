@@ -1,5 +1,5 @@
 //
-//  HCLocationUtility.swift
+//  HSLocationUtility.swift
 //  Hackalendar
 //
 //  Created by Clarence Ji on 11/17/15.
@@ -9,14 +9,14 @@
 import UIKit
 import MapKit
 
-class HCLocationUtility: NSObject {
+public class HSLocationUtility: NSObject {
 
     /**
         Extract city name from the location.
         For instance the location param is give as: London, United Kingdom.
         That will result London.
     */
-    class func extractCityNameFromLocation(location: String?) -> String? {
+    public class func extractCityNameFromLocation(location: String?) -> String? {
      
         if location == nil {
             return ""
@@ -30,7 +30,7 @@ class HCLocationUtility: NSObject {
         as a string. For Instance, given by London, United Kingdom will result
         something like this (51.5073509, -0.12775829999998223)
     */
-    class func locateCityForLocationName(location: String?, completitionHandler: (CLLocationCoordinate2D?) -> Void) {
+    public class func locateCityForLocationName(location: String?, completitionHandler: (CLLocationCoordinate2D?) -> Void) {
         
         let searchRequest = MKLocalSearchRequest()
         searchRequest.naturalLanguageQuery = location

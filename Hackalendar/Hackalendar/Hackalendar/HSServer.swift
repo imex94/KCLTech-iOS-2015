@@ -1,5 +1,5 @@
 //
-//  HCServer.swift
+//  HSServer.swift
 //  Hackalendar
 //
 //  Created by Alex Telek on 10/11/2015.
@@ -8,31 +8,31 @@
 
 import UIKit
 
-enum HCServerError {
+enum HSServerError {
     case ServerError
     case ParseError
 }
 
-enum HCServerResponse {
+enum HSServerResponse {
     case Success(AnyObject?)
-    case Failure(HCServerError)
+    case Failure(HSServerError)
 }
 
-class HCServer: NSObject {
+class HSServer: NSObject {
 
-    class func sharedServer() -> HCServer {
+    class func sharedServer() -> HSServer {
         
-        var sharedInstance: HCServer!
+        var sharedInstance: HSServer!
         var onceToken = dispatch_once_t()
         
         dispatch_once(&onceToken) { () -> Void in
-            sharedInstance = HCServer()
+            sharedInstance = HSServer()
         }
         
         return sharedInstance
     }
     
-    func GET(urlString: String, completitionHandler: (HCServerResponse) -> Void) {
+    func GET(urlString: String, completitionHandler: (HSServerResponse) -> Void) {
      
         let session = NSURLSession.sharedSession()
         let dataTask = session.dataTaskWithURL(NSURL(string: urlString)!) { (data, response, error) -> Void in

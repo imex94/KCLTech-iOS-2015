@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import HackalendarSDK
 
 class HCHackathonDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var tableView: UITableView!
     
-    var hackathon: HackathonItem!
+    var hackathon: HSHackathon!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Automatic">
-    <entity name="HackathonItem" representedClassName=".HackathonItem" syncable="YES">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Xcode 7.0">
+    <entity name="HSHackathon" representedClassName="HSHackathon" syncable="YES">
         <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="endDate" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="facebookURL" optional="YES" attributeType="String" syncable="YES"/>
@@ -22,6 +22,6 @@
         <attribute name="year" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="HackathonItem" positionX="-63" positionY="-18" width="128" height="330"/>
+        <element name="HSHackathon" positionX="-63" positionY="-18" width="128" height="330"/>
     </elements>
 </model>
