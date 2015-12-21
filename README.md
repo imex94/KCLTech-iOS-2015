@@ -42,4 +42,4 @@ King's College London - KCLTech Society's iOS session with 10 weeks material in 
 
 ## Session 109
 
-- Hackalendar - Part 5 - watchOS 2 App for Hackalendar
+- [Hackalendar - Part 5](Hackalendar/Hackalendar) - watchOS 2 App for Hackalendar
