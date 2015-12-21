@@ -8,16 +8,35 @@
 
 import UIKit
 import CoreData
+import WatchConnectivity
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
 
     var window: UIWindow?
 
-
+    var session: WCSession?
+    var currentYear = HCCalendarUtility.getCurrentYear()
+    var currentMonth = HCCalendarUtility.getCurrentMonth()
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if WCSession.isSupported() {
+            session = WCSession.defaultSession()
+            session!.delegate = self
+            session!.activateSession()
+        }
+        
         return true
+    }
+    
+    func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
+        
+        if let _ = message["reference"] {
+            let hackathons = HCHackathonProvider.loadHackathons(currentYear, month: currentMonth)
+            replyHandler(["reply" : HCHackathonSerialization.serializeObject(hackathons)])
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {
