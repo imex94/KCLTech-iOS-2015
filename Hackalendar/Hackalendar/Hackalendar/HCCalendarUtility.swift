@@ -39,4 +39,19 @@ class HCCalendarUtility: NSObject {
         
         return NSDateFormatter().monthSymbols
     }
+    
+    class func getETADays(dateString: String) -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MMMM dd"
+        let date = dateFormatter.dateFromString(dateString)
+        
+        let components = NSCalendar.currentCalendar().components(.Day, fromDate: NSDate(), toDate: date!, options: .MatchStrictly)
+        
+        let days = components.day
+        if days < 0 {
+            return "Finished"
+        } else {
+            return "\(days) days"
+        }
+    }
 }

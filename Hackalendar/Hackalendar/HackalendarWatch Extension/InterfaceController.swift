@@ -48,6 +48,7 @@ class InterfaceController: WKInterfaceController {
             let hackathonRow = row as! HCWHackathonRow
             hackathonRow.hackathonName.setText(hackathon.title)
             hackathonRow.hackathonPlace.setText(extractCityNameFromLocation(hackathon.city))
+            hackathonRow.hackathonDate.setText(HCCalendarUtility.getETADays(hackathon.startDate!))
         }
     }
     
