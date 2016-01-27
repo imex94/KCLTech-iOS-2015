@@ -8,6 +8,7 @@ King's College London - KCLTech Society's iOS session with 10 weeks material in 
 ## Session 101
 
 - [Session 101 Slides](session101/session101_2015.pdf)
+- [Introduction in Playground](session101/Intro.playground)
 
 ## Session 102
 
