@@ -74,6 +74,8 @@ func invokeMethod() {
     "hello"
 }
 
+NSLog("Hello", [])
+
 invokeMethod()
 
 func invokeMethod(input: String) {
