@@ -9,7 +9,6 @@ var str = "Hello, playground"
 func naivePrime(number: Int) -> Bool {
     for i in 2...Int(sqrt(Double(number))) {
         if (number % i == 0) {
-            
             return false
         }
     }

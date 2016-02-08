@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -20,7 +20,6 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUX-tC-PKK">
                                 <rect key="frame" x="251" y="90" width="99" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Present image"/>
                                 <connections>
                                     <segue destination="yd2-TE-8YA" kind="presentation" identifier="presentImageView" modalTransitionStyle="coverVertical" id="WbP-NU-3Y1"/>
@@ -28,24 +27,20 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wgc-ZL-3RO">
                                 <rect key="frame" x="253" y="210" width="95" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Show website"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ghx-wS-CZi">
                                 <rect key="frame" x="264" y="330" width="72" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Show map"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24h-FV-LiI">
                                 <rect key="frame" x="268" y="450" width="64" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Deep link"/>
                                 <connections>
                                     <action selector="deepLinkButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lfp-cd-Zd6"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Wgc-ZL-3RO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="621-xO-1WZ"/>
@@ -77,21 +72,18 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGx-Z0-1Yw">
                                 <rect key="frame" x="282" y="550" width="37" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <action selector="dismissView:" destination="yd2-TE-8YA" eventType="touchUpInside" id="kGs-f1-0SD"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f9N-RM-NlM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f9N-RM-NlM">
                                 <rect key="frame" x="20" y="28" width="560" height="343"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="343" id="cRU-xn-5x3"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="f9N-RM-NlM" firstAttribute="trailing" secondItem="BsN-8o-OQA" secondAttribute="trailingMargin" id="6F6-Jq-gDw"/>
