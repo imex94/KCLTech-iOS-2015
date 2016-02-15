@@ -278,12 +278,12 @@
 				2B2FC6AF1C175D100017CA40 /* InterfaceController.swift */,
 				2BC79FAF1C288FF000A7194A /* HackathonDetailInterfaceController.swift */,
 				2B2FC6B11C175D100017CA40 /* ExtensionDelegate.swift */,
-				2B2FC6B31C175D100017CA40 /* Assets.xcassets */,
-				2B2FC6B51C175D100017CA40 /* Info.plist */,
 				2B2FC6C11C1761650017CA40 /* HCWConnectivity.swift */,
 				2B2FC6C71C176A0E0017CA40 /* HCWHackathonDeserialization.swift */,
 				2B2FC6C91C176A4C0017CA40 /* HCWHackathon.swift */,
 				2BC79FAD1C28866B00A7194A /* HCWHackathonRow.swift */,
+				2B2FC6B31C175D100017CA40 /* Assets.xcassets */,
+				2B2FC6B51C175D100017CA40 /* Info.plist */,
 			);
 			path = "HackalendarWatch Extension";
 			sourceTree = "<group>";

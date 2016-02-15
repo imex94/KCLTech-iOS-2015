@@ -37,7 +37,7 @@ class HCHackathonTableViewController: UITableViewController, HCHackathonTableVie
     }
     
     func fetchData() {
-        
+        print("Year: \(currentYear), Month: \(currentMonth)")
         HCHackathonProvider.provideHackathonsFor(currentYear, month: currentMonth) { (hackathons) -> Void in
             
             self.hackathons.appendContentsOf(hackathons)

@@ -22,7 +22,7 @@ class HCHackathonProvider: NSObject {
         
         // --> What I was doing wrong :), we need to have %@, which means that '%@' will be
         // replaced by the elements from the args array in order.
-        return HackathonItem.fetchHackathons("year == %@ && month == %@", args: [year, month], sortKeywords: ["startDate"])
+        return HackathonItem.fetchHackathons("year == %@ && month == %@", args: [year, month], sortKeywords: ["startDate", "endDate"])
     }
     
     /**
@@ -41,7 +41,14 @@ class HCHackathonProvider: NSObject {
     class func provideHackathonsFor(year: Int, month: Int, completionBlock: ([HackathonItem]) -> Void) {
         
         // hackalist.org/api/1.0/2015/12.json
-        let urlString = baseURL + "\(year)/\(month).json"
+        var urlString = baseURL
+        if month < 10 {
+            urlString += "\(year)/0\(month).json"
+        } else {
+            urlString += "\(year)/0\(month).json"
+        }
+        
+        print(urlString)
         
         HCServer.sharedServer().GET(urlString) { (response) -> Void in
             
